@@ -11,8 +11,9 @@ GitHub をブラウザで開けば、実行した結果を含めてそのまま�
 | 1 | [環境構築マニュアル](setup/windows_setup.md) | Windows 11 に Python 3.13・PyTorch・Gymnasium・Stable-Baselines3 などを用意する | なし |
 | 2 | [第0章 動作確認](chapters/ch00_setup_check/ch00_setup_check.ipynb) | ライブラリと装置を確かめ、CartPole をでたらめに動かして GIF にする（[GIF はこちら](chapters/ch00_setup_check/README.md)） | 環境構築マニュアル |
 | 3 | [第1章 動かして楽しむ](chapters/ch01_first_training/ch01_first_training.ipynb) | Stable-Baselines3 の PPO で CartPole を学習させ、学習の前後と学習曲線を見比べる（[GIF はこちら](chapters/ch01_first_training/README.md)） | 第0章 |
+| 4 | [第2章 Gymnasium の API の基本](chapters/ch02_gymnasium_api/ch02_gymnasium_api.ipynb) | 環境を手で動かして、観測・行動・報酬のやり取りを確かめ、自分で書いた規則で棒を立てる（[クラス図](diagrams/gymnasium_classes.md)） | 第1章 |
 
-第2章（Gymnasium の API の基本）以降は準備中です。
+第3章（FrozenLake）以降は準備中です。
 
 ## ライセンス
 
