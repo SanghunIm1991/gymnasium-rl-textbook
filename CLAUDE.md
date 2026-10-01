@@ -32,8 +32,8 @@ Gymnasium の標準環境を易しい順に解いていく、強化学習の自�
 
 ## このPCでの執筆環境
 
-- Python 3.13 は Python install manager で入れ、プロジェクト専用の `.venv` を作る。導入はユーザーが行う。anaconda base には入れない
-- このPCには従来の `py` ランチャーがあり、`py` コマンドはそちらが優先される（`py -3.11` は anaconda のまま）。install manager の操作は `pymanager` コマンドで行う（例: `pymanager install 3.13`、`pymanager list`、`pymanager exec -V:3.13 -m venv .venv`）。`py install --configure -y` は実行しない
+- Python 3.13.16（python.org の従来のインストーラで、ユーザーごとに導入済み）から `py -3.13 -m venv .venv` でプロジェクト専用の `.venv` を作る。パッケージの導入はユーザーが行う。anaconda base には入れない
+- Python install manager は入れていない
 - venv は有効化せず、`.venv\Scripts\python` を直接呼ぶ
 - PATH 上の `code` コマンドは Cursor 側が先に見つかる。VS Code の CLI が必要なときはフルパスで呼ぶ
 

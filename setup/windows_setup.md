@@ -11,8 +11,7 @@
 
 > **注記**
 > - **確認日**: 版の番号とコマンドは、2026-10-01 に公式の文書と配布元（python.org・docs.python.org・PyPI・PyTorch の公式リポジトリ）で確かめたものです。新しい版が出ていることがあるので、食い違う場合は公式の文書を優先してください。
-> - **期待する結果の出どころ**: この下書きの「期待する結果」は、公式の文書と仕様から想定したものです。著者の環境で実際に確かめたら、表示を差し替えます。
-> - **Python の導入**（3節・4節）は、従来の Python launcher があるパソコンで `pymanager` コマンドを使う経路（3-2節の補足）で確かめます。`py install` を使う本文の経路は、公式の文書をもとに書いたものです。2つの経路は、コマンドの名前が違うだけで、同じ働きをします。
+> - **期待する結果の出どころ**: 3節の `py -0p` と `py -3.13 --version` の表示は、著者の環境で実際に確かめたものです（2026-10-01）。インストーラの画面の説明と、4節以降の表示は、公式の文書と仕様から想定したもので、著者の環境で確かめたら差し替えます。
 > - **GPU 版の手順**（5-2節）は、公式の情報をもとに書いたもので、著者の環境では動作を確かめていません。
 > - **実行環境が無くても読めるように**: 各手順の直後に、成功したときの表示と、その読み方を書いています。
 
@@ -63,39 +62,47 @@ git clone <この教材のリポジトリのURL>
 
 この教科書では Python 3.13 を使います。3.13 を選んだのは、この教科書で使う主なライブラリ（Gymnasium 1.3.0・Stable-Baselines3 2.9.0・PyTorch 2.14）が、そろって対応している最も新しい版だからです（2026-10-01 時点）。
 
-### 3-1. Python install manager を入れる
+### 3-1. インストーラで入れる
 
-**Python install manager** は、Python 本体を入れたり、版を切り替えたりするための公式の道具です。次のどちらかで入れます。
+1. [python.org の Windows 版のダウンロードページ](https://www.python.org/downloads/windows/)を開き、Python 3.13 の最新版（2026-10-01 時点では 3.13.16）の「Windows installer (64-bit)」をダウンロードします。ファイル名は `python-3.13.16-amd64.exe` のようになります。
+2. ダウンロードしたファイルを実行します。最初の画面の下にある「Add python.exe to PATH」のチェックは、外したままで構いません。この教科書では、Python を `py` コマンド（Python launcher）から呼ぶためです。
+3. 「Install Now」を選び、終わるまで待ちます。
 
-- Microsoft Store で「Python Install Manager」を検索して入れる
-- [python.org のダウンロードページ](https://www.python.org/downloads/) から、install manager を入手して入れる
+### 3-2. 入ったことを確かめる
 
-### 3-2. Python 3.13 を入れる
-
-PowerShell で次を実行します。
+PowerShell を開き直してから、次を実行します。
 
 ```powershell
-py install 3.13
+py -3.13 --version
 ```
 
-初めて使うときは、`%LocalAppData%\Python\bin` を PATH に加えるかを尋ねられることがあります。この教科書では `py` コマンドだけを使うので、加えなくても構いません。
-
-**期待する結果**（`py list` の表示）:
+**期待する結果**:
 
 ```text
-（著者の環境で確かめた表示に差し替える予定）
+Python 3.13.16
 ```
 
-`py list` を実行し、入れた Python の一覧に `3.13` が含まれていれば成功です。
+`Python 3.13.` で始まる版が表示されれば成功です（末尾の番号は、入れた時期によって変わります）。
 
-> **以前から `py` コマンドを使っている場合**: 従来の「Python launcher」が入っているパソコンでは、`py` コマンドがそちらに奪われ、`py install` が使えないことがあります。その場合は、同じ働きをする `pymanager` コマンドを使います（`pymanager install 3.13`、`pymanager list`）。以降の `py -V:3.13` も `pymanager exec -V:3.13` に読み替えます。
+入っている Python の一覧は `py -0p` で見られます。
+
+**期待する結果**（ほかの Python が入っているパソコンの例。一覧の中身はパソコンによって変わります）:
+
+```text
+ -V:3.13 *        C:\Users\<ユーザー名>\AppData\Local\Programs\Python\Python313\python.exe
+ -V:3.9           C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\python.exe
+```
+
+`-V:3.13` の行があれば成功です。`*` は、版を指定せずに `py` を実行したときに使われる Python の印です。
+
+> **Python install manager について**: python.org は、新しい導入方法として **Python install manager**（`py install 3.13` のように、コマンドで Python を入れたり切り替えたりする道具）を勧め始めています。従来のインストーラは Python 3.14 から非推奨になり、3.16 以降は作られない予定です（2026-10-01 時点、[Python の公式文書](https://docs.python.org/3.14/using/windows.html)による）。この教科書で使う 3.13 は従来のインストーラで入れられるので、このマニュアルでは従来のインストーラを使います。
 
 ## 4. 仮想環境を作る
 
 教材のフォルダで次を実行します。フォルダの中に `.venv` という名前の仮想環境ができます。
 
 ```powershell
-py -V:3.13 -m venv .venv
+py -3.13 -m venv .venv
 ```
 
 **期待する結果**: 何も表示されずに終わり、教材のフォルダに `.venv` フォルダができます。
@@ -210,8 +217,8 @@ Successfully installed ... gymnasium-1.3.0 ... stable-baselines3-2.9.0 ...
 
 | 症状 | 考えられる原因と対処 |
 |---|---|
-| `py` が見つからない | 3-1節の install manager が入っていません。入れ直してから、PowerShell を開き直します |
-| `py install` で「不明なコマンド」のように言われる | 従来の Python launcher が `py` を受け持っています。3-2節の補足のとおり `pymanager` を使います |
+| `py` が見つからない | Python launcher が入っていません。3-1節のインストーラを実行し直し、「Modify」でオプションの「py launcher」にチェックが入っているかを確かめます。そのあと、PowerShell を開き直します |
+| Python 3.13 を入れたあと、以前から使っていた別の Python（Anaconda など）が `py -0p` の一覧から消えた | 3.13 のインストーラは、Python launcher も新しい版に更新します。新しい launcher は、必要な登録の情報がそろっていない Python を一覧に出しません。この教科書の作業には影響しません。消えた Python は、`py` を使わず、その `python.exe` をフルパスで指定すれば今までどおり使えます |
 | 6-1節で `box2d` のビルド（`Building wheel for box2d`）が始まり、失敗する | `box2d` は Python 3.10〜3.13 用にビルド済みのファイルが配布されています（2026-10-01 時点）。ビルドが始まるのは、仮想環境の Python がこれ以外の版のときです。6-2節のコマンドで Python の版を確かめ、3.13 で仮想環境を作り直します |
 | VS Code のカーネルの一覧に `.venv` が出ない | 教材のフォルダ（`.venv` があるフォルダ）を開いているかを確かめます。それでも出ない場合は、VS Code を再起動します |
 
