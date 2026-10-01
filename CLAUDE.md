@@ -18,9 +18,22 @@ Gymnasium の標準環境を易しい順に解いていく、強化学習の自�
 - 作る順番: 最初に「環境構築マニュアル（CPU 版）＋第0〜2章」を一通り作り、概要資料はそのあとに書く
 - Notebook は `nbconvert` を使い、Claude が `.venv` の中で上から最後まで実行して出力を保存する
 
+## 書き方の規則
+
+`learning-text-authoring` スキルに従う。このプロジェクトで決めた項目:
+
+- 閲覧の形: GitHub をブラウザで開いて読めば足りる。文書間の参照は相対リンク
+- 読者の作業場所: リポジトリを clone（または ZIP でダウンロード）し、その直下に `.venv` を作って Notebook をそのまま動かす
+- 読む順番: 環境構築マニュアル → 第0章 → 第1章 → …（概要資料は後で書き、README の「読む順番」の表に入れる）
+- 必須と任意: 第13章（MuJoCo）は任意
+- 図: SVG だけ（mermaid 版は作らない）。作成は `svg-diagram` エージェント
+- 期待する結果: Notebook は Claude が `nbconvert` で実行した実際の出力。マニュアルのコマンドの表示は、ユーザーが導入したときの出力を貼ってもらい、`<ユーザー名>` のように伏せて「実際に確かめた表示」として載せる。それまでは「仕様から想定した表示」として下書きする
+- ライセンス: 文章は CC BY 4.0、コードは MIT。参照した公式文書の出典は各冊の末尾に書く
+
 ## このPCでの執筆環境
 
-- Python 3.13（python.org 版）から作るプロジェクト専用の `.venv` を使う。導入はユーザーが行う。anaconda base には入れない
+- Python 3.13 は Python install manager で入れ、プロジェクト専用の `.venv` を作る。導入はユーザーが行う。anaconda base には入れない
+- このPCには従来の `py` ランチャーがあり、`py` コマンドはそちらが優先される（`py -3.11` は anaconda のまま）。install manager の操作は `pymanager` コマンドで行う（例: `pymanager install 3.13`、`pymanager list`、`pymanager exec -V:3.13 -m venv .venv`）。`py install --configure -y` は実行しない
 - venv は有効化せず、`.venv\Scripts\python` を直接呼ぶ
 - PATH 上の `code` コマンドは Cursor 側が先に見つかる。VS Code の CLI が必要なときはフルパスで呼ぶ
 
