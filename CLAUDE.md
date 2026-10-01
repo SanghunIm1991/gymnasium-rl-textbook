@@ -29,7 +29,7 @@ Gymnasium の標準環境を易しい順に解いていく、強化学習の自�
 - 図: SVG だけ（mermaid 版は作らない）。作成は `svg-diagram` エージェント
 - 期待する結果: Notebook は Claude が `nbconvert` で実行した実際の出力。マニュアルのコマンドの表示は、Claude が集めた情報（公式の文書、PyPI の依存関係等）から推定して書き、冒頭の注記で「想定」と区別する。ユーザーは実行時に表示が違った場合だけ修正を依頼する。Claude が自分で実行して確かめた表示（読み取りのコマンド等）は「実際に確かめた表示」とし、ユーザー名は `<ユーザー名>` と伏せる
 - Notebook の書式: 各コードセルの実際の出力が期待する結果を兼ねる。出力の直後の Markdown セルに「**期待する結果**（上の出力の読み方）:」として読み方だけを書く。「全体像」の節（図）は、図が役立つ章（第1章以降）に置き、短い第0章では省く
-- Notebook の中の画像（GIF・グラフ）: Markdown セルから `figures/` を相対パスで参照すると、GitHub（private リポジトリ）の Notebook の表示では出ない。`IPython.display.Image` 等でコードセルの出力に埋め込む。ファイルとしても `figures/` に保存してよい。SVG の図は `diagrams/` の Markdown ファイルから表示し、Notebook からはその Markdown へリンクする
+- Notebook の中の画像（GIF・グラフ）: GitHub（private リポジトリ）の Notebook の表示では、Markdown セルから `figures/` を相対パスで参照した画像も、出力に埋め込んだ GIF（`image/gif`）も出ない。グラフや静止画は matplotlib 等の PNG の出力にする。動き（GIF）は、出力に埋め込んで VS Code 向けに残しつつ、Notebook にはコマ送りの PNG を載せ、GIF そのものは章のフォルダの `README.md` から相対パスで表示して Notebook からリンクする。matplotlib の図の中の文字は英数字にする（日本語のフォントが無い環境で文字化けするため）。SVG の図は `diagrams/` の Markdown ファイルから表示し、Notebook からはその Markdown へリンクする
 - Notebook の正本: `.ipynb` そのものを正本として直接編集し、`nbconvert` で再実行して出力を保存する（生成スクリプトはリポジトリに置かない）
 - ライセンス: 文章と図は CC BY 4.0、コードは MIT（著作権者の表記は `SanghunIm1991`）。`LICENSE.md` に範囲・全文・第三者のソフトウェアの一覧がある。参照した公式文書の出典は各冊の末尾に書き、ツールが出力した絵（Gymnasium の描画等）はその旨も書く
 - 一般論の書き方: まだ書いていない章や、確かめていない範囲について言い切らない。確かめた数値（例: seed を変えて測った値）を書く
