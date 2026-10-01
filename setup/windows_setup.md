@@ -11,11 +11,10 @@
 
 > **注記**
 > - **確認日**: 版の番号とコマンドは、2026-10-01 に公式の文書と配布元（python.org・docs.python.org・PyPI・PyTorch の公式リポジトリ）で確かめたものです。新しい版が出ていることがあるので、食い違う場合は公式の文書を優先してください。
-> - **期待する結果の出どころ**: 3節の `py -0p` と `py -3.13 --version` の表示は、著者の環境で実際に確かめたものです（2026-10-01）。インストーラの画面の説明と、4節以降の表示は、公式の文書と仕様から想定したもので、著者の環境で確かめたら差し替えます。
-> - **GPU 版の手順**（5-2節）は、公式の情報をもとに書いたもので、著者の環境では動作を確かめていません。
+> - **期待する結果の出どころ**: 3-2節の `py -3.13 --version` と `py -0p` の表示は、著者の環境で実際に確かめたものです（2026-10-01）。インストーラの画面の説明と、4節以降の表示は、公式の文書と PyPI に登録された依存関係の情報から想定したものです。ライブラリの版の番号や、一緒に入る依存ライブラリの顔ぶれは、実行した時期によって変わります。
+> - **GPU 版の手順**（5-2節）は、公式の情報をもとに書いたもので、著者の環境では動作を確かめていません。PyTorch の公式サイトの画面の選択肢の名前も確かめていません。
+> - **8節の表**の一部（2行目）は、著者の環境で起きた現象と、そこからの推定にもとづいています。
 > - **実行環境が無くても読めるように**: 各手順の直後に、成功したときの表示と、その読み方を書いています。
-
-<!-- TODO（著者用）: 著者の環境で導入したときの実際の表示に差し替え、上の注記を「実際に確かめた表示」に改める -->
 
 ## 0. 学習目標と完了条件
 
@@ -60,7 +59,7 @@ git clone <この教材のリポジトリのURL>
 
 ## 3. Python 3.13 を入れる
 
-この教科書では Python 3.13 を使います。3.13 を選んだのは、この教科書で使う主なライブラリ（Gymnasium 1.3.0・Stable-Baselines3 2.9.0・PyTorch 2.14）が、そろって対応している最も新しい版だからです（2026-10-01 時点）。
+この教科書では Python 3.13 を使います。3.13 を選んだのは、この教科書で使う主なライブラリ（Gymnasium 1.3.0・Stable-Baselines3 2.9.0・PyTorch 2.14）が、そろって対応している最も新しい版だからです（2026-10-01 時点）。特に、LunarLander などの物理シミュレーションに使う `box2d` は、Windows 向けのビルド済みのファイルが 3.13 用までしか配布されていません。それより新しい Python では、パソコンの上でビルドが必要になり、導入でつまずきやすくなります。
 
 ### 3-1. インストーラで入れる
 
@@ -113,13 +112,17 @@ py -3.13 -m venv .venv
 .venv\Scripts\python -m pip install --upgrade pip
 ```
 
-**期待する結果**（末尾の抜粋。版の番号は実行した時期によって変わります）:
+**期待する結果**（抜粋。`<…>` の部分は実行した時期によって変わります）:
 
 ```text
-Successfully installed pip-<版の番号>
+Requirement already satisfied: pip in .\.venv\Lib\site-packages (<元の版>)
+Collecting pip
+  Downloading pip-<新しい版>-py3-none-any.whl.metadata (<サイズ>)
+...
+Successfully installed pip-<新しい版>
 ```
 
-最後の行が `Successfully installed` か、`Requirement already satisfied`（すでに最新）であれば成功です。
+最後の行が `Successfully installed pip-...` であれば成功です。仮想環境に入っていた pip がすでに最新のときは、`Requirement already satisfied` の行だけで終わります。これも成功です。
 
 > **仮想環境の「有効化」について**
 > - **一般的な書き方**: 公式の文書は、`.venv\Scripts\Activate` で仮想環境を有効にしてから `python` や `pip` を使う方法を勧めています。
@@ -130,7 +133,7 @@ Successfully installed pip-<版の番号>
 
 PyTorch は、ニューラルネットワークの計算を受け持つライブラリです。この教科書の学習アルゴリズム（Stable-Baselines3）も、内部で PyTorch を使います。PyTorch には CPU だけで動く版と、NVIDIA の GPU を使う版があり、入れ方が違います。
 
-**迷ったら CPU 版**を選んでください。この教科書の第1〜12章で使う小さなネットワークは、GPU よりも CPU のほうが速いことも多く、CPU 版で困ることはありません。GPU が効いてくるのは、任意の第13章（MuJoCo）以降です。
+**迷ったら CPU 版**を選んでください。この教科書の第1〜12章で使う小さなネットワークは、GPU よりも CPU のほうが速いことも多く、CPU 版で困ることはありません。GPU が効いてくるのは、任意の第13章（MuJoCo）です。
 
 ### 5-1. CPU 版
 
@@ -140,13 +143,17 @@ PyTorch は、ニューラルネットワークの計算を受け持つライブ
 
 `--index-url` は、PyTorch 公式の配布元のうち、CPU 版が置かれている場所を指定するオプションです。
 
-**期待する結果**（末尾の抜粋）:
+**期待する結果**（末尾の抜粋。依存ライブラリの版の番号は `<…>` で省略）:
 
 ```text
-Successfully installed ... torch-2.14.1+cpu ...
+Looking in indexes: https://download.pytorch.org/whl/cpu
+Collecting torch
+  Downloading https://download.pytorch.org/whl/cpu/torch-2.14.1%2Bcpu-cp313-cp313-win_amd64.whl (<サイズ>)
+...
+Successfully installed MarkupSafe-<…> filelock-<…> fsspec-<…> jinja2-<…> mpmath-<…> networkx-<…> setuptools-<…> sympy-<…> torch-2.14.1+cpu typing-extensions-<…>
 ```
 
-`torch-` の後ろに `+cpu` が付いた版が入っていれば成功です。
+最後の行に、`+cpu` が付いた `torch-2.14.1+cpu` が含まれていれば成功です。ほかの名前は、PyTorch が使う補助のライブラリで、一緒に入ります。ファイルは数百 MB あるので、ダウンロードに数分かかることがあります。
 
 ### 5-2. GPU（CUDA）版（著者の環境では未検証）
 
@@ -160,7 +167,13 @@ NVIDIA の GPU を使う場合の手順です。
 .venv\Scripts\python -m pip install torch --index-url https://download.pytorch.org/whl/cu126
 ```
 
-GPU を使えるかどうかは、第0章の Notebook で確かめます。
+**期待する結果**（末尾の抜粋。CUDA 12.6 を選んだ場合）:
+
+```text
+Successfully installed ... torch-2.14.1+cu126 ...
+```
+
+`torch-` の後ろに、選んだ CUDA の版を表す `+cu126` のような印が付いていれば成功です。`+cpu` になっている場合は、CPU 版が入っています。手順3のコマンドの `--index-url` を確かめてください。GPU を実際に使えるかどうかは、第0章の Notebook で確かめます。
 
 ## 6. Gymnasium・Stable-Baselines3 ほかを入れる
 
@@ -181,13 +194,19 @@ GPU を使えるかどうかは、第0章の Notebook で確かめます。
 | `matplotlib`・`imageio` | 学習曲線のグラフと、動きの GIF を作る |
 | `ipykernel`・`nbconvert` | Notebook から仮想環境を使う、Notebook をまとめて実行する |
 
-**期待する結果**（末尾の抜粋）:
+**期待する結果**（末尾の抜粋。一緒に入る依存ライブラリは多いので、主なものだけを残して `...` で省略）:
 
 ```text
-Successfully installed ... gymnasium-1.3.0 ... stable-baselines3-2.9.0 ...
+Collecting gymnasium[box2d,classic-control,toy-text]
+  Downloading gymnasium-1.3.0-py3-none-any.whl.metadata (<サイズ>)
+...
+Collecting box2d==2.3.10 (from gymnasium[box2d,classic-control,toy-text])
+  Downloading box2d-2.3.10-cp313-cp313-win_amd64.whl.metadata (<サイズ>)
+...
+Successfully installed ... box2d-2.3.10 ... gymnasium-1.3.0 ... matplotlib-<…> ... numpy-<…> ... optuna-<…> ... pygame-ce-<…> ... stable-baselines3-2.9.0 ... swig-<…> ... tensorboard-<…> ...
 ```
 
-最後の行が `Successfully installed` で始まり、エラー（`ERROR:`）が出ていなければ成功です。
+最後の行が `Successfully installed` で始まり、エラー（`ERROR:`）が出ていなければ成功です。`box2d` の行で、ファイル名が `cp313-cp313-win_amd64.whl` で終わっていることも見ておきます。これは、Python 3.13 の Windows 用にビルド済みのファイルが選ばれたという意味です。
 
 ### 6-2. 版を確かめる
 
@@ -218,7 +237,7 @@ Successfully installed ... gymnasium-1.3.0 ... stable-baselines3-2.9.0 ...
 | 症状 | 考えられる原因と対処 |
 |---|---|
 | `py` が見つからない | Python launcher が入っていません。3-1節のインストーラを実行し直し、「Modify」でオプションの「py launcher」にチェックが入っているかを確かめます。そのあと、PowerShell を開き直します |
-| Python 3.13 を入れたあと、以前から使っていた別の Python（Anaconda など）が `py -0p` の一覧から消えた | 3.13 のインストーラは、Python launcher も新しい版に更新します。新しい launcher は、必要な登録の情報がそろっていない Python を一覧に出しません。この教科書の作業には影響しません。消えた Python は、`py` を使わず、その `python.exe` をフルパスで指定すれば今までどおり使えます |
+| Python 3.13 を入れたあと、以前から使っていた別の Python（Anaconda など）が `py -0p` の一覧から消えた | 3.13 のインストーラは、Python launcher も新しい版に更新します。新しい launcher では、それまで一覧に出ていた Python が出なくなることがあります（著者の環境では Anaconda で起きました。Windows への登録のされ方によると考えられます）。この教科書の作業には影響しません。消えた Python は、`py` を使わず、その `python.exe` をフルパスで指定すれば今までどおり使えます |
 | 6-1節で `box2d` のビルド（`Building wheel for box2d`）が始まり、失敗する | `box2d` は Python 3.10〜3.13 用にビルド済みのファイルが配布されています（2026-10-01 時点）。ビルドが始まるのは、仮想環境の Python がこれ以外の版のときです。6-2節のコマンドで Python の版を確かめ、3.13 で仮想環境を作り直します |
 | VS Code のカーネルの一覧に `.venv` が出ない | 教材のフォルダ（`.venv` があるフォルダ）を開いているかを確かめます。それでも出ない場合は、VS Code を再起動します |
 
@@ -232,6 +251,9 @@ Successfully installed ... gymnasium-1.3.0 ... stable-baselines3-2.9.0 ...
 
 - Python Software Foundation, "Using Python on Windows"（Python 3.14 のドキュメント）: https://docs.python.org/3.14/using/windows.html
 - python.org, "Python Releases for Windows": https://www.python.org/downloads/windows/
-- PyTorch, "Get Started": https://pytorch.org/get-started/locally/
 - PyTorch, "Release Compatibility Matrix"（`RELEASE.md`）: https://github.com/pytorch/pytorch/blob/main/RELEASE.md
 - PyPI の各パッケージのページ（gymnasium・stable-baselines3・torch・box2d）
+
+次のページは、導入の入口として案内しているもので、内容は確かめていません。
+
+- PyTorch, "Get Started": https://pytorch.org/get-started/locally/
