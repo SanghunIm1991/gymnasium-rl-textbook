@@ -19,7 +19,7 @@
     </text>
     <line x1="80" y1="206" x2="520" y2="206" stroke="#333"/>
     <text font-size="12.5">
-      <tspan x="92" y="225">+ reset(seed=None) -&gt; (observation, info)</tspan>
+      <tspan x="92" y="225">+ reset(*, seed=None) -&gt; (observation, info)</tspan>
       <tspan x="92" y="243">+ step(action)</tspan>
       <tspan x="122" y="261">-&gt; (observation, reward, terminated, truncated, info)</tspan>
       <tspan x="92" y="279">+ render()</tspan>
@@ -136,7 +136,7 @@
   <text x="34" y="310" font-family="monospace" font-size="13" font-weight="bold" fill="#1565c0" text-anchor="end">env</text>
 
   <!-- ===== 関連の線（緑、矢印） Env が Space を2つ持つ ===== -->
-  <g stroke="#2e7d32" stroke-width="1.5" fill="none" stroke-dasharray="6,3">
+  <g stroke="#2e7d32" stroke-width="1.5" fill="none">
     <line x1="520" y1="132" x2="699" y2="132"/>
     <line x1="520" y1="182" x2="699" y2="182"/>
   </g>
@@ -161,7 +161,7 @@
     <polyline points="300,666 310,672 300,678" fill="none" stroke="#1565c0" stroke-width="2"/>
     <text x="318" y="677">保持（ラッパーが環境を包む）</text>
     <!-- 関連 -->
-    <line x1="500" y1="672" x2="540" y2="672" stroke="#2e7d32" stroke-width="1.5" stroke-dasharray="6,3"/>
+    <line x1="500" y1="672" x2="540" y2="672" stroke="#2e7d32" stroke-width="1.5"/>
     <polyline points="530,666 540,672 530,678" fill="none" stroke="#2e7d32" stroke-width="1.5"/>
     <text x="548" y="677">関連（属性として持つ）</text>
   </g>

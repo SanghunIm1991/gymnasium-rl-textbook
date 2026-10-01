@@ -1,6 +1,6 @@
 # Gymnasium の主なクラス
 
-[第2章 Gymnasium の API の基本](../chapters/ch02_gymnasium_api/ch02_gymnasium_api.ipynb)で使うクラスの関係を、1枚の図にまとめたものです。すべての属性やメソッドではなく、第2章で使うものだけを載せています。
+[第2章 Gymnasium の API の基本](../chapters/ch02_gymnasium_api/ch02_gymnasium_api.ipynb)で使うクラスの関係を、1枚の図にまとめたものです。すべての属性やメソッドではなく、第2章で使うものだけを載せています。メソッドの引数も、第2章で使うものだけです（たとえば `reset()` には、図に無い `options` という引数もあります）。
 
 ![Gymnasium の主なクラスの関係。Env を Wrapper と CartPoleEnv が継承し、Wrapper は Env を1つ保持する。TimeLimit などの具体的なラッパーは Wrapper を継承する。Env は観測と行動の Space を持ち、Box と Discrete は Space を継承する](gymnasium_classes.svg)
 
