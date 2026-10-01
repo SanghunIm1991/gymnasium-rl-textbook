@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# 学習の生成物（再生成できる大きなファイル）
+checkpoints/
+logs/
+runs/
+
+# 秘密情報・エディタ・OS
+.env
+.vscode/
+Thumbs.db
+desktop.ini
