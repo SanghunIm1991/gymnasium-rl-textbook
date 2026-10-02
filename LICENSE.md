@@ -47,6 +47,7 @@ SOFTWARE.
 | NumPy | BSD-3-Clause ほか（複数のライセンスの組み合わせ） | 数値計算 |
 | matplotlib | Python Software Foundation License に基づく matplotlib のライセンス | グラフの作成 |
 | imageio | BSD-2-Clause | GIF の作成 |
+| Pillow | MIT-CMU License | 絵への線と文字の書き込み |
 | TensorBoard | Apache License 2.0 | 学習の記録の書き出しと、グラフでの表示 |
 | IPython | BSD-3-Clause | Notebook の中での画像の表示（`IPython.display.Image`） |
 | pygame-ce | LGPL v2.1 | Gymnasium の環境の描画 |
