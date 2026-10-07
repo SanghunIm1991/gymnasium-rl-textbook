@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="720" viewBox="0 0 1000 720" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="1090" height="720" viewBox="0 0 1090 720" font-family="sans-serif">
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
       <path d="M0,0 L10,5 L0,10 z" fill="#444"/>
@@ -6,112 +6,124 @@
   </defs>
 
   <!-- 背景 -->
-  <rect x="0" y="0" width="1000" height="720" fill="#ffffff"/>
+  <rect x="0" y="0" width="1090" height="720" fill="#ffffff"/>
 
   <!-- 表題 -->
-  <text x="500" y="42" font-size="22" font-weight="bold" text-anchor="middle" fill="#222">この教科書で扱う強化学習の手法の地図</text>
+  <text x="545" y="42" font-size="22" font-weight="bold" text-anchor="middle" fill="#222">この教科書で扱う強化学習の手法の地図</text>
 
   <!-- 凡例 -->
-  <g font-size="13" fill="#333" transform="translate(-50,0)">
-    <text x="262" y="83">区分:</text>
-    <rect x="300" y="69" width="88" height="20" rx="10" fill="#7b4fa0"/>
-    <text x="344" y="83" font-size="12" fill="#fff" text-anchor="middle">モデルベース</text>
-    <rect x="400" y="69" width="64" height="20" rx="10" fill="#c8661a"/>
-    <text x="432" y="83" font-size="12" fill="#fff" text-anchor="middle">方策オン</text>
-    <rect x="476" y="69" width="64" height="20" rx="10" fill="#2b6cb0"/>
-    <text x="508" y="83" font-size="12" fill="#fff" text-anchor="middle">方策オフ</text>
-    <text x="556" y="83" fill="#555">（箱の枠の色も同じ）</text>
-    <rect x="700" y="70" width="30" height="18" rx="4" fill="#fff" stroke="#c8661a" stroke-width="4"/>
-    <text x="740" y="83">太枠: 第1章で済み</text>
+  <g font-size="13" fill="#333" transform="translate(140,0)">
+    <text x="0" y="83">区分:</text>
+    <rect x="38" y="69" width="88" height="20" rx="10" fill="#7b4fa0"/>
+    <text x="82" y="83" font-size="12" fill="#fff" text-anchor="middle">モデルベース</text>
+    <rect x="138" y="69" width="64" height="20" rx="10" fill="#c8661a"/>
+    <text x="170" y="83" font-size="12" fill="#fff" text-anchor="middle">方策オン</text>
+    <rect x="214" y="69" width="64" height="20" rx="10" fill="#2b6cb0"/>
+    <text x="246" y="83" font-size="12" fill="#fff" text-anchor="middle">方策オフ</text>
+    <text x="288" y="83" fill="#555">（箱の枠の色も同じ）</text>
+    <rect x="440" y="70" width="30" height="18" rx="4" fill="#fff" stroke="#888888" stroke-width="2"/>
+    <text x="478" y="83">灰: 区分なし（章で扱う）</text>
+    <rect x="654" y="70" width="30" height="18" rx="4" fill="#fff" stroke="#c8661a" stroke-width="4"/>
+    <text x="692" y="83">太枠: 第1章で済み</text>
   </g>
 
   <!-- 段階の領域 -->
-  <rect x="20" y="105" width="450" height="565" rx="12" fill="#fbf6e6" stroke="#e2d6a8"/>
-  <rect x="530" y="105" width="450" height="565" rx="12" fill="#eaf5f5" stroke="#b5d8d8"/>
-  <text x="245" y="138" font-size="17" font-weight="bold" text-anchor="middle" fill="#6b5a1e">表で覚える（状態が少ない環境）</text>
-  <text x="755" y="138" font-size="16" font-weight="bold" text-anchor="middle" fill="#1f5f5f">ニューラルネットワークで近似する（状態が多い環境）</text>
+  <rect x="20" y="105" width="320" height="565" rx="12" fill="#fbf6e6" stroke="#e2d6a8"/>
+  <rect x="420" y="105" width="650" height="565" rx="12" fill="#eaf5f5" stroke="#b5d8d8"/>
+  <text x="180" y="138" font-size="17" font-weight="bold" text-anchor="middle" fill="#6b5a1e">表で覚える（状態が少ない環境）</text>
+  <text x="745" y="138" font-size="17" font-weight="bold" text-anchor="middle" fill="#1f5f5f">ニューラルネットワークで近似する（状態が多い環境）</text>
 
   <!-- 矢印 -->
   <g stroke="#444" stroke-width="2" fill="none" marker-end="url(#arrow)">
-    <line x1="245" y1="244" x2="245" y2="292"/>
-    <path d="M415,336 H500 V202 H583"/>
-    <line x1="755" y1="378" x2="755" y2="426"/>
-    <line x1="755" y1="512" x2="755" y2="560"/>
+    <line x1="110" y1="244" x2="110" y2="292"/>
+    <line x1="325" y1="336" x2="433" y2="336"/>
+    <line x1="475" y1="378" x2="475" y2="426"/>
+    <line x1="795" y1="244" x2="795" y2="292"/>
+    <line x1="795" y1="378" x2="795" y2="426"/>
   </g>
   <g font-size="13" fill="#333">
-    <text x="257" y="273">モデルを使わずに経験から学ぶ</text>
-    <rect x="419" y="342" width="104" height="20" rx="4" fill="#fff"/>
-    <text x="423" y="356" font-size="12">表 → ネットワーク</text>
-    <text x="767" y="407">価値の見積もりを組み合わせる</text>
-    <text x="767" y="541">更新を行き過ぎないようにする</text>
+    <text x="122" y="273">モデルを使わずに経験から学ぶ</text>
+    <text x="380" y="356" font-size="12" text-anchor="middle">表 →</text>
+    <text x="380" y="372" font-size="12" text-anchor="middle">ネットワーク</text>
+    <text x="487" y="407">連続の行動へ広げる</text>
+    <text x="807" y="273">価値の見積もりを組み合わせる</text>
+    <text x="807" y="407">更新を行き過ぎないようにする</text>
   </g>
 
   <!-- 段階1の箱 -->
   <g>
-    <rect x="75" y="160" width="340" height="84" rx="8" fill="#fff" stroke="#7b4fa0" stroke-width="2"/>
-    <text x="89" y="186" font-size="16" font-weight="bold" fill="#222">価値反復・方策反復（動的計画法）</text>
-    <text x="89" y="210" font-size="13" fill="#333">環境: FrozenLake</text>
-    <text x="89" y="232" font-size="13" fill="#333">章: 第3章（予定）</text>
-    <rect x="313" y="217" width="88" height="20" rx="10" fill="#7b4fa0"/>
-    <text x="357" y="231" font-size="12" fill="#fff" text-anchor="middle">モデルベース</text>
+    <rect x="35" y="160" width="290" height="84" rx="8" fill="#fff" stroke="#7b4fa0" stroke-width="2"/>
+    <text x="49" y="186" font-size="15" font-weight="bold" fill="#222">価値反復・方策反復（動的計画法）</text>
+    <text x="49" y="210" font-size="13" fill="#333">環境: FrozenLake</text>
+    <text x="49" y="232" font-size="13" fill="#333">章: 第3章（予定）</text>
+    <rect x="223" y="217" width="88" height="20" rx="10" fill="#7b4fa0"/>
+    <text x="267" y="231" font-size="12" fill="#fff" text-anchor="middle">モデルベース</text>
   </g>
   <g>
-    <rect x="75" y="294" width="340" height="84" rx="8" fill="#fff" stroke="#2b6cb0" stroke-width="2"/>
-    <text x="89" y="320" font-size="16" font-weight="bold" fill="#222">Q学習</text>
-    <text x="89" y="344" font-size="13" fill="#333">環境: FrozenLake・CliffWalking・Taxi</text>
-    <text x="89" y="366" font-size="13" fill="#333">章: 第3〜5章（予定）</text>
-    <rect x="337" y="351" width="64" height="20" rx="10" fill="#2b6cb0"/>
-    <text x="369" y="365" font-size="12" fill="#fff" text-anchor="middle">方策オフ</text>
+    <rect x="35" y="294" width="290" height="84" rx="8" fill="#fff" stroke="#2b6cb0" stroke-width="2"/>
+    <text x="49" y="320" font-size="15" font-weight="bold" fill="#222">Q学習</text>
+    <text x="49" y="344" font-size="13" fill="#333">環境: FrozenLake・CliffWalking・Taxi</text>
+    <text x="49" y="366" font-size="13" fill="#333">章: 第3〜5章（予定）</text>
+    <rect x="247" y="351" width="64" height="20" rx="10" fill="#2b6cb0"/>
+    <text x="279" y="365" font-size="12" fill="#fff" text-anchor="middle">方策オフ</text>
   </g>
   <g>
-    <rect x="75" y="428" width="340" height="84" rx="8" fill="#fff" stroke="#c8661a" stroke-width="2"/>
-    <text x="89" y="454" font-size="16" font-weight="bold" fill="#222">SARSA</text>
-    <text x="89" y="478" font-size="13" fill="#333">環境: CliffWalking</text>
-    <text x="89" y="500" font-size="13" fill="#333">章: 第4章（予定）</text>
-    <rect x="337" y="485" width="64" height="20" rx="10" fill="#c8661a"/>
-    <text x="369" y="499" font-size="12" fill="#fff" text-anchor="middle">方策オン</text>
+    <rect x="35" y="428" width="290" height="84" rx="8" fill="#fff" stroke="#c8661a" stroke-width="2"/>
+    <text x="49" y="454" font-size="15" font-weight="bold" fill="#222">SARSA</text>
+    <text x="49" y="478" font-size="13" fill="#333">環境: CliffWalking</text>
+    <text x="49" y="500" font-size="13" fill="#333">章: 第4章（予定）</text>
+    <rect x="247" y="485" width="64" height="20" rx="10" fill="#c8661a"/>
+    <text x="279" y="499" font-size="12" fill="#fff" text-anchor="middle">方策オン</text>
   </g>
   <g>
-    <rect x="75" y="562" width="340" height="84" rx="8" fill="#fff" stroke="#888888" stroke-width="2"/>
-    <text x="89" y="588" font-size="16" font-weight="bold" fill="#222">モンテカルロ法</text>
-    <text x="89" y="612" font-size="13" fill="#333">環境: Blackjack</text>
-    <text x="89" y="634" font-size="13" fill="#333">章: 第6章（予定）</text>
+    <rect x="35" y="562" width="290" height="84" rx="8" fill="#fff" stroke="#888888" stroke-width="2"/>
+    <text x="49" y="588" font-size="15" font-weight="bold" fill="#222">モンテカルロ法</text>
+    <text x="49" y="612" font-size="13" fill="#333">環境: Blackjack</text>
+    <text x="49" y="634" font-size="13" fill="#333">章: 第6章（予定）</text>
   </g>
 
-  <!-- 段階2の箱 -->
+  <!-- 段階2の箱（左の列: 方策オフ、右の列: 方策オン） -->
   <g>
-    <rect x="585" y="160" width="340" height="84" rx="8" fill="#fff" stroke="#2b6cb0" stroke-width="2"/>
-    <text x="599" y="186" font-size="16" font-weight="bold" fill="#222">DQN</text>
-    <text x="599" y="210" font-size="13" fill="#333">環境: CartPole</text>
-    <text x="599" y="232" font-size="13" fill="#333">章: 第7章（予定）</text>
-    <rect x="847" y="217" width="64" height="20" rx="10" fill="#2b6cb0"/>
-    <text x="879" y="231" font-size="12" fill="#fff" text-anchor="middle">方策オフ</text>
+    <rect x="435" y="294" width="300" height="84" rx="8" fill="#fff" stroke="#2b6cb0" stroke-width="2"/>
+    <text x="449" y="320" font-size="15" font-weight="bold" fill="#222">DQN</text>
+    <text x="449" y="344" font-size="13" fill="#333">環境: CartPole</text>
+    <text x="449" y="366" font-size="13" fill="#333">章: 第7章（予定）</text>
+    <rect x="657" y="351" width="64" height="20" rx="10" fill="#2b6cb0"/>
+    <text x="689" y="365" font-size="12" fill="#fff" text-anchor="middle">方策オフ</text>
   </g>
   <g>
-    <rect x="585" y="294" width="340" height="84" rx="8" fill="#fff" stroke="#c8661a" stroke-width="2"/>
-    <text x="599" y="320" font-size="16" font-weight="bold" fill="#222">方策勾配法（REINFORCE）</text>
-    <text x="599" y="344" font-size="13" fill="#333">環境: CartPole</text>
-    <text x="599" y="366" font-size="13" fill="#333">章: 第8章（予定）</text>
-    <rect x="847" y="351" width="64" height="20" rx="10" fill="#c8661a"/>
-    <text x="879" y="365" font-size="12" fill="#fff" text-anchor="middle">方策オン</text>
+    <rect x="435" y="428" width="300" height="84" rx="8" fill="#fff" stroke="#2b6cb0" stroke-width="2"/>
+    <text x="449" y="454" font-size="15" font-weight="bold" fill="#222">DDPG・SAC（方策オフの Actor-Critic）</text>
+    <text x="449" y="478" font-size="13" fill="#333">環境: Pendulum</text>
+    <text x="449" y="500" font-size="13" fill="#333">章: 第10章（予定）</text>
+    <rect x="657" y="485" width="64" height="20" rx="10" fill="#2b6cb0"/>
+    <text x="689" y="499" font-size="12" fill="#fff" text-anchor="middle">方策オフ</text>
   </g>
   <g>
-    <rect x="585" y="428" width="340" height="84" rx="8" fill="#fff" stroke="#2b6cb0" stroke-width="2"/>
-    <text x="599" y="454" font-size="16" font-weight="bold" fill="#222">Actor-Critic（DDPG・SAC など）</text>
-    <text x="599" y="478" font-size="13" fill="#333">環境: Pendulum</text>
-    <text x="599" y="500" font-size="13" fill="#333">章: 第10章（予定）</text>
-    <rect x="847" y="485" width="64" height="20" rx="10" fill="#2b6cb0"/>
-    <text x="879" y="499" font-size="12" fill="#fff" text-anchor="middle">方策オフ</text>
+    <rect x="755" y="160" width="300" height="84" rx="8" fill="#fff" stroke="#c8661a" stroke-width="2"/>
+    <text x="769" y="186" font-size="15" font-weight="bold" fill="#222">方策勾配法（REINFORCE）</text>
+    <text x="769" y="210" font-size="13" fill="#333">環境: CartPole</text>
+    <text x="769" y="232" font-size="13" fill="#333">章: 第8章（予定）</text>
+    <rect x="977" y="217" width="64" height="20" rx="10" fill="#c8661a"/>
+    <text x="1009" y="231" font-size="12" fill="#fff" text-anchor="middle">方策オン</text>
   </g>
   <g>
-    <rect x="585" y="562" width="340" height="84" rx="8" fill="#fff4ea" stroke="#c8661a" stroke-width="5"/>
-    <text x="599" y="588" font-size="16" font-weight="bold" fill="#222">PPO</text>
-    <text x="599" y="612" font-size="13" fill="#333">環境: CartPole・LunarLander</text>
-    <text x="599" y="634" font-size="13" fill="#333">章: 第1章（済み）・第11章（予定）</text>
-    <rect x="847" y="619" width="64" height="20" rx="10" fill="#c8661a"/>
-    <text x="879" y="633" font-size="12" fill="#fff" text-anchor="middle">方策オン</text>
+    <rect x="755" y="294" width="300" height="84" rx="8" fill="#fff" stroke="#c8661a" stroke-width="2"/>
+    <text x="769" y="320" font-size="15" font-weight="bold" fill="#222">A2C（方策オンの Actor-Critic）</text>
+    <text x="769" y="344" font-size="13" fill="#333">環境: 未定</text>
+    <text x="769" y="366" font-size="13" fill="#333">章: 未定</text>
+    <rect x="977" y="351" width="64" height="20" rx="10" fill="#c8661a"/>
+    <text x="1009" y="365" font-size="12" fill="#fff" text-anchor="middle">方策オン</text>
+  </g>
+  <g>
+    <rect x="755" y="428" width="300" height="84" rx="8" fill="#fff4ea" stroke="#c8661a" stroke-width="5"/>
+    <text x="769" y="454" font-size="15" font-weight="bold" fill="#222">PPO</text>
+    <text x="769" y="478" font-size="13" fill="#333">環境: CartPole・LunarLander</text>
+    <text x="769" y="500" font-size="13" fill="#333">章: 第1章（済み）・第11章（予定）</text>
+    <rect x="977" y="440" width="64" height="20" rx="10" fill="#c8661a"/>
+    <text x="1009" y="454" font-size="12" fill="#fff" text-anchor="middle">方策オン</text>
   </g>
 
   <!-- 注記 -->
-  <text x="980" y="700" font-size="12" text-anchor="end" fill="#666">（予定）はまだ書いていない章。章を書くときに見直すことがあります</text>
+  <text x="1070" y="700" font-size="12" text-anchor="end" fill="#666">（予定）はまだ書いていない章。章を書くときに見直すことがあります</text>
 </svg>
