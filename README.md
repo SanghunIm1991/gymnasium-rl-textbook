@@ -12,6 +12,11 @@ GitHub をブラウザで開けば、実行した結果を含めてそのまま�
 | 2 | [第0章 動作確認](chapters/ch00_setup_check/ch00_setup_check.ipynb) | ライブラリと装置を確かめ、CartPole をでたらめに動かして GIF にする（[GIF はこちら](chapters/ch00_setup_check/README.md)） | 環境構築マニュアル |
 | 3 | [第1章 動かして楽しむ](chapters/ch01_first_training/ch01_first_training.ipynb) | Stable-Baselines3 の PPO で CartPole を学習させ、学習の前後と学習曲線を見比べる（[GIF はこちら](chapters/ch01_first_training/README.md)） | 第0章 |
 | 4 | [第2章 Gymnasium の API の基本](chapters/ch02_gymnasium_api/ch02_gymnasium_api.ipynb) | 環境を手で動かして、観測・行動・報酬のやり取りを確かめ、自分で書いた規則で棒を立てる（[クラス図](diagrams/gymnasium_classes.md)） | 第1章 |
+| 5 | 概要資料（地図） | ここまでの体験と、これからの章をつなぐ4本の資料。順番は自由で、各章から何度でも戻って読める | 第2章 |
+| | ・[強化学習](overview/rl.md) | 基本の言葉、考え方を分ける3つの軸、手法の地図と章の対応 | |
+| | ・[Gymnasium](overview/gymnasium.md) | 環境の一覧と章の対応、基本の操作、ベクトル化環境 | |
+| | ・[Stable-Baselines3](overview/sb3.md) | アルゴリズムと扱える行動の種類、学習・保存・評価の操作 | |
+| | ・[PyTorch](overview/pytorch.md) | テンソル、自動微分、学習の基本の流れ（第7章から使う予定） | |
 
 第3章（FrozenLake）以降は準備中です。
 
