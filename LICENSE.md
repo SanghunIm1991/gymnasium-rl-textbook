@@ -4,8 +4,8 @@
 
 | 対象 | ライセンス |
 |---|---|
-| 文章と図（Markdown のファイル、Notebook の Markdown のセル、`figures/`・`diagrams/` の画像） | [クリエイティブ・コモンズ 表示 4.0 国際（CC BY 4.0）](https://creativecommons.org/licenses/by/4.0/legalcode.ja) |
-| コード（Notebook のコードのセル、Python のファイル） | MIT License（下に全文） |
+| 文章と図（Markdown のファイル、Notebook の Markdown のセル、`figures/`・`diagrams/` の画像。下の行のコードブロックを除く） | [クリエイティブ・コモンズ 表示 4.0 国際（CC BY 4.0）](https://creativecommons.org/licenses/by/4.0/legalcode.ja) |
+| コード（Notebook のコードのセル、Python のファイル、Markdown のファイルや Notebook の Markdown のセルの中のコードブロック） | MIT License（下に全文） |
 
 著作権者: Copyright (c) 2026 SanghunIm1991
 
