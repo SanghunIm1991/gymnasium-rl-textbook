@@ -85,11 +85,10 @@ Python 3.13.16
 
 入っている Python の一覧は `py -0p` で見られます。
 
-**期待する結果**（ほかの Python が入っているパソコンの例。一覧の中身はパソコンによって変わります）:
+**期待する結果**（Python 3.13 の行の抜粋。ほかの Python が入っているパソコンでは、その行も並びます）:
 
 ```text
  -V:3.13 *        C:\Users\<ユーザー名>\AppData\Local\Programs\Python\Python313\python.exe
- -V:3.9           C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\python.exe
 ```
 
 `-V:3.13` の行があれば成功です。`*` は、版を指定せずに `py` を実行したときに使われる Python の印です。
