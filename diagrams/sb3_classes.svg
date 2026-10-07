@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 670" width="1000" height="670">
+  <defs>
+    <marker id="openArrow" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M1,1 L11,6 L1,11" fill="none" stroke="#333" stroke-width="1.5"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1000" height="670" fill="#ffffff"/>
+
+  <!-- 表題 -->
+  <text x="500" y="40" font-family="sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#222">Stable-Baselines3 の主なクラス（2.9.0）</text>
+
+  <g font-family="monospace" fill="#222">
+
+    <!-- ===== 方策の名前の箱（注記の箱） ===== -->
+    <path d="M20,92 L276,92 L290,106 L290,206 L20,206 Z" fill="#fffde7" stroke="#333" stroke-width="1.2" stroke-dasharray="5,3"/>
+    <path d="M276,92 L276,106 L290,106" fill="none" stroke="#333" stroke-width="1.2"/>
+    <text x="155" y="114" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">名前で選ぶ方策</text>
+    <line x1="20" y1="124" x2="290" y2="124" stroke="#333" stroke-dasharray="5,3"/>
+    <text font-size="12.5">
+      <tspan x="32" y="146">MlpPolicy</tspan>
+      <tspan x="32" y="170">CnnPolicy</tspan>
+      <tspan x="32" y="194">MultiInputPolicy</tspan>
+    </text>
+    <text font-family="sans-serif" font-size="12.5" fill="#444">
+      <tspan x="176" y="146">数を並べた観測</tspan>
+      <tspan x="176" y="170">画像</tspan>
+      <tspan x="176" y="194">辞書の形の観測</tspan>
+    </text>
+
+    <!-- ===== BaseAlgorithm ===== -->
+    <rect x="360" y="70" width="280" height="176" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+    <text x="500" y="92" font-family="sans-serif" font-size="16" font-weight="bold" text-anchor="middle">BaseAlgorithm</text>
+    <line x1="360" y1="102" x2="640" y2="102" stroke="#333"/>
+    <text font-size="12.5">
+      <tspan x="372" y="121">+ policy</tspan>
+      <tspan x="372" y="139">+ env: VecEnv</tspan>
+      <tspan x="372" y="157">+ device</tspan>
+    </text>
+    <line x1="360" y1="166" x2="640" y2="166" stroke="#333"/>
+    <text font-size="12.5">
+      <tspan x="372" y="185">+ learn(total_timesteps)</tspan>
+      <tspan x="372" y="203">+ predict(observation, deterministic)</tspan>
+      <tspan x="372" y="221">+ save(path)</tspan>
+      <tspan x="372" y="239">+ load(path) «classmethod»</tspan>
+    </text>
+
+    <!-- ===== VecEnv ===== -->
+    <rect x="750" y="90" width="170" height="34" fill="#fff8e1" stroke="#333" stroke-width="1.5"/>
+    <text x="835" y="112" font-family="sans-serif" font-size="16" font-weight="bold" text-anchor="middle">VecEnv</text>
+
+    <!-- DummyVecEnv -->
+    <rect x="685" y="172" width="140" height="70" fill="#fff8e1" stroke="#333" stroke-width="1.5"/>
+    <text x="755" y="191" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">DummyVecEnv</text>
+    <line x1="685" y1="199" x2="825" y2="199" stroke="#333"/>
+    <text font-family="sans-serif" font-size="12" fill="#444" text-anchor="middle">
+      <tspan x="755" y="216">環境を順番に</tspan>
+      <tspan x="755" y="233">1つずつ進める</tspan>
+    </text>
+
+    <!-- SubprocVecEnv -->
+    <rect x="840" y="172" width="140" height="70" fill="#fff8e1" stroke="#333" stroke-width="1.5"/>
+    <text x="910" y="191" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">SubprocVecEnv</text>
+    <line x1="840" y1="199" x2="980" y2="199" stroke="#333"/>
+    <text font-family="sans-serif" font-size="12" fill="#444" text-anchor="middle">
+      <tspan x="910" y="216">別々のプロセスで</tspan>
+      <tspan x="910" y="233">同時に進める</tspan>
+    </text>
+
+    <!-- 継承: DummyVecEnv / SubprocVecEnv → VecEnv -->
+    <g stroke="#333" stroke-width="1.5" fill="none">
+      <polyline points="755,172 755,152 910,152 910,172"/>
+      <line x1="835" y1="152" x2="835" y2="138"/>
+    </g>
+    <polygon points="835,124 827,138 843,138" fill="#ffffff" stroke="#333" stroke-width="1.5"/>
+
+    <!-- 関連: BaseAlgorithm → VecEnv (env) -->
+    <line x1="640" y1="107" x2="750" y2="107" stroke="#333" stroke-width="1.5" marker-end="url(#openArrow)"/>
+    <text x="692" y="100" font-size="12.5" text-anchor="middle">env</text>
+
+    <!-- 関連: BaseAlgorithm → 方策の箱 (policy) -->
+    <line x1="360" y1="150" x2="290" y2="150" stroke="#333" stroke-width="1.5" marker-end="url(#openArrow)"/>
+    <text x="325" y="143" font-size="12.5" text-anchor="middle">policy</text>
+
+    <!-- ===== OnPolicyAlgorithm ===== -->
+    <rect x="77" y="310" width="260" height="58" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+    <text x="207" y="330" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">OnPolicyAlgorithm</text>
+    <line x1="77" y1="338" x2="337" y2="338" stroke="#333"/>
+    <text x="207" y="358" font-family="sans-serif" font-size="12" fill="#444" text-anchor="middle">今の方策で集めた経験だけで更新</text>
+
+    <!-- ===== OffPolicyAlgorithm ===== -->
+    <rect x="545" y="310" width="300" height="58" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+    <text x="695" y="330" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">OffPolicyAlgorithm</text>
+    <line x1="545" y1="338" x2="845" y2="338" stroke="#333"/>
+    <text x="695" y="358" font-family="sans-serif" font-size="12" fill="#444" text-anchor="middle">経験をリプレイバッファに貯めて使い回す</text>
+
+    <!-- 継承: On/Off → BaseAlgorithm -->
+    <g stroke="#333" stroke-width="1.5" fill="none">
+      <polyline points="207,310 207,282 695,282 695,310"/>
+      <line x1="500" y1="282" x2="500" y2="260"/>
+    </g>
+    <polygon points="500,246 492,260 508,260" fill="#ffffff" stroke="#333" stroke-width="1.5"/>
+
+    <!-- ===== PPO（第1章で使用・太枠） ===== -->
+    <rect x="20" y="432" width="180" height="70" fill="#e8f5e9" stroke="#333" stroke-width="3"/>
+    <text x="110" y="452" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">PPO</text>
+    <line x1="20" y1="460" x2="200" y2="460" stroke="#333"/>
+    <text font-family="sans-serif" font-size="12" fill="#444" text-anchor="middle">
+      <tspan x="110" y="477">行動: Box・Discrete・</tspan>
+      <tspan x="110" y="494">MultiDiscrete・MultiBinary</tspan>
+    </text>
+
+    <!-- ===== A2C ===== -->
+    <rect x="215" y="432" width="180" height="70" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
+    <text x="305" y="452" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">A2C</text>
+    <line x1="215" y1="460" x2="395" y2="460" stroke="#333"/>
+    <text font-family="sans-serif" font-size="12" fill="#444" text-anchor="middle">
+      <tspan x="305" y="477">行動: Box・Discrete・</tspan>
+      <tspan x="305" y="494">MultiDiscrete・MultiBinary</tspan>
+    </text>
+
+    <!-- ===== DQN ===== -->
+    <rect x="410" y="432" width="180" height="70" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
+    <text x="500" y="452" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">DQN</text>
+    <line x1="410" y1="460" x2="590" y2="460" stroke="#333"/>
+    <text x="500" y="486" font-family="sans-serif" font-size="12" fill="#444" text-anchor="middle">行動: Discrete のみ</text>
+
+    <!-- ===== SAC ===== -->
+    <rect x="605" y="432" width="180" height="70" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
+    <text x="695" y="452" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">SAC</text>
+    <line x1="605" y1="460" x2="785" y2="460" stroke="#333"/>
+    <text x="695" y="486" font-family="sans-serif" font-size="12" fill="#444" text-anchor="middle">行動: Box のみ</text>
+
+    <!-- ===== TD3 ===== -->
+    <rect x="800" y="432" width="180" height="70" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
+    <text x="890" y="452" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">TD3</text>
+    <line x1="800" y1="460" x2="980" y2="460" stroke="#333"/>
+    <text x="890" y="486" font-family="sans-serif" font-size="12" fill="#444" text-anchor="middle">行動: Box のみ</text>
+
+    <!-- 継承: PPO / A2C → OnPolicyAlgorithm -->
+    <g stroke="#333" stroke-width="1.5" fill="none">
+      <polyline points="110,432 110,404 305,404 305,432"/>
+      <line x1="207" y1="404" x2="207" y2="382"/>
+    </g>
+    <polygon points="207,368 199,382 215,382" fill="#ffffff" stroke="#333" stroke-width="1.5"/>
+
+    <!-- 継承: DQN / SAC / TD3 → OffPolicyAlgorithm -->
+    <g stroke="#333" stroke-width="1.5" fill="none">
+      <polyline points="500,432 500,404 890,404 890,432"/>
+      <line x1="695" y1="404" x2="695" y2="432"/>
+      <line x1="695" y1="404" x2="695" y2="382"/>
+    </g>
+    <polygon points="695,368 687,382 703,382" fill="#ffffff" stroke="#333" stroke-width="1.5"/>
+
+    <!-- ===== DDPG（TD3 を継承） ===== -->
+    <rect x="800" y="556" width="180" height="58" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
+    <text x="890" y="576" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle">DDPG</text>
+    <line x1="800" y1="584" x2="980" y2="584" stroke="#333"/>
+    <text x="890" y="604" font-family="sans-serif" font-size="12" fill="#444" text-anchor="middle">行動: Box のみ</text>
+    <line x1="890" y1="556" x2="890" y2="516" stroke="#333" stroke-width="1.5"/>
+    <polygon points="890,502 882,516 898,516" fill="#ffffff" stroke="#333" stroke-width="1.5"/>
+
+    <!-- ===== 凡例 ===== -->
+    <rect x="20" y="540" width="420" height="96" fill="#ffffff" stroke="#999" stroke-width="1"/>
+    <text x="34" y="560" font-family="sans-serif" font-size="13" font-weight="bold">凡例</text>
+    <!-- 継承 -->
+    <line x1="34" y1="582" x2="96" y2="582" stroke="#333" stroke-width="1.5"/>
+    <polygon points="110,582 96,574 96,590" fill="#ffffff" stroke="#333" stroke-width="1.5"/>
+    <text x="122" y="586" font-family="sans-serif" font-size="12.5">継承（矢印の先が親クラス）</text>
+    <!-- 関連 -->
+    <line x1="34" y1="604" x2="110" y2="604" stroke="#333" stroke-width="1.5" marker-end="url(#openArrow)"/>
+    <text x="122" y="608" font-family="sans-serif" font-size="12.5">関連（矢印の先を持つ。線の文字は属性名）</text>
+    <!-- 太枠 -->
+    <rect x="34" y="616" width="76" height="14" fill="#e8f5e9" stroke="#333" stroke-width="3"/>
+    <text x="122" y="628" font-family="sans-serif" font-size="12.5">太枠: 第1章で使ったアルゴリズム</text>
+  </g>
+
+  <!-- 隅の版表記 -->
+  <text x="980" y="656" font-family="sans-serif" font-size="11" fill="#777" text-anchor="end">Stable-Baselines3 2.9.0（2026-10-07 確認）</text>
+</svg>

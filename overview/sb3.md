@@ -16,7 +16,9 @@
 
 ## 1. 全体像
 
-<!-- TODO（著者用）: クラスの関係の図（SVG）を作ったら、ここに表示する -->
+![Stable-Baselines3 の主なクラスの関係。BaseAlgorithm の下に OnPolicyAlgorithm と OffPolicyAlgorithm があり、PPO・A2C は前者、DQN・SAC・TD3 は後者を継承する。DDPG は TD3 を継承する。BaseAlgorithm は env として VecEnv を、policy として名前で選ぶ方策を持つ](../diagrams/sb3_classes.svg)
+
+図の左上の「名前で選ぶ方策」は、クラスではなく、モデルを作るときに文字列で渡す方策の名前の一覧です（5節）。図は、Stable-Baselines3 2.9.0 のソースで確かめた関係だけを描いています。
 
 SB3 のアルゴリズムは、どれも `BaseAlgorithm` というクラスを親に持ちます。そのすぐ下で、**方策オン**（`OnPolicyAlgorithm`）と**方策オフ**（`OffPolicyAlgorithm`）の2つの系統に分かれます。
 

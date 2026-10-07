@@ -15,7 +15,7 @@
 
 ## 1. 全体像
 
-<!-- TODO（著者用）: 学習の流れの図（SVG）を作ったら、ここに表示する -->
+![ニューラルネットワークの学習の流れ。① 予測（model(x)）→ ② 損失（loss_fn）→ ③ 傾き（zero_grad と backward）→ ④ 更新（optimizer.step）を、損失が十分小さくなるまで繰り返す](../diagrams/pytorch_training_loop.svg)
 
 ニューラルネットワークの学習は、次の4つの手順の繰り返しです。
 

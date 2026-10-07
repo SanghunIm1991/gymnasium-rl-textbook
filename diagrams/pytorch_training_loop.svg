@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 630" width="1000" height="630">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1000" height="630" fill="#ffffff"/>
+
+  <!-- 表題 -->
+  <text x="500" y="42" font-family="sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#222">ニューラルネットワークの学習の流れ（1回分）</text>
+
+  <!-- ===== 部品の箱と手順の箱をつなぐ点線（箱の下に描く） ===== -->
+  <g stroke="#888" stroke-width="1.3" stroke-dasharray="5 4" fill="none">
+    <!-- model → ① / ④ -->
+    <line x1="175" y1="225" x2="210" y2="175"/>
+    <line x1="175" y1="305" x2="210" y2="355"/>
+    <!-- loss_fn → ② -->
+    <line x1="790" y1="142" x2="825" y2="142"/>
+    <!-- optimizer → ④ / ③ -->
+    <line x1="420" y1="490" x2="420" y2="455"/>
+    <line x1="580" y1="490" x2="580" y2="455"/>
+  </g>
+
+  <!-- ===== 手順の矢印（時計回り） ===== -->
+  <g stroke="#1565c0" stroke-width="2.5" fill="none" marker-end="url(#arrow)">
+    <line x1="472" y1="142" x2="526" y2="142"/>   <!-- ① → ② -->
+    <line x1="760" y1="212" x2="760" y2="316"/>   <!-- ② → ③ -->
+    <line x1="528" y1="387" x2="474" y2="387"/>   <!-- ③ → ④ -->
+    <line x1="240" y1="318" x2="240" y2="214"/>   <!-- ④ → ① -->
+  </g>
+
+  <!-- ===== 手順の箱 ===== -->
+  <g font-family="sans-serif" fill="#222">
+    <!-- ① 予測（左上） -->
+    <rect x="210" y="75" width="260" height="135" rx="8" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+    <text x="340" y="100" font-size="16" font-weight="bold" text-anchor="middle">① 予測</text>
+    <text x="340" y="123" font-size="13.5" text-anchor="middle">入力をネットワークに通す</text>
+    <rect x="222" y="153" width="236" height="47" rx="4" fill="#f7f7f7" stroke="#bbb"/>
+    <text x="340" y="181" font-family="monospace" font-size="12.5" text-anchor="middle">prediction = model(x)</text>
+
+    <!-- ② 損失（右上） -->
+    <rect x="530" y="75" width="260" height="135" rx="8" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+    <text x="660" y="100" font-size="16" font-weight="bold" text-anchor="middle">② 損失</text>
+    <text x="660" y="123" font-size="13.5" text-anchor="middle">予測と目標のずれを1つの数にする</text>
+    <rect x="542" y="153" width="236" height="47" rx="4" fill="#f7f7f7" stroke="#bbb"/>
+    <text x="660" y="181" font-family="monospace" font-size="12.5" text-anchor="middle">loss = loss_fn(prediction, y)</text>
+
+    <!-- ③ 傾き（右下） -->
+    <rect x="530" y="320" width="260" height="135" rx="8" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+    <text x="660" y="345" font-size="16" font-weight="bold" text-anchor="middle">③ 傾き</text>
+    <text x="660" y="366" font-size="13.5" text-anchor="middle">損失を小さくする向きを計算する</text>
+    <text x="660" y="384" font-size="13.5" text-anchor="middle">（自動微分）</text>
+    <rect x="542" y="398" width="236" height="47" rx="4" fill="#f7f7f7" stroke="#bbb"/>
+    <text font-family="monospace" font-size="12.5" text-anchor="middle">
+      <tspan x="660" y="417">optimizer.zero_grad()</tspan>
+      <tspan x="660" y="436">loss.backward()</tspan>
+    </text>
+
+    <!-- ④ 更新（左下） -->
+    <rect x="210" y="320" width="260" height="135" rx="8" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+    <text x="340" y="345" font-size="16" font-weight="bold" text-anchor="middle">④ 更新</text>
+    <text x="340" y="368" font-size="13.5" text-anchor="middle">傾きに沿って重みを少し動かす</text>
+    <rect x="222" y="398" width="236" height="47" rx="4" fill="#f7f7f7" stroke="#bbb"/>
+    <text x="340" y="426" font-family="monospace" font-size="12.5" text-anchor="middle">optimizer.step()</text>
+  </g>
+
+  <!-- ===== 輪の中央の文字 ===== -->
+  <text x="500" y="271" font-family="sans-serif" font-size="15" font-weight="bold" text-anchor="middle" fill="#1565c0">この4つを、損失が十分小さくなるまで繰り返す</text>
+
+  <!-- ===== 部品の箱（輪の外側） ===== -->
+  <g font-family="sans-serif" fill="#222">
+    <!-- model（左） -->
+    <rect x="25" y="200" width="150" height="130" rx="6" fill="#fff8e1" stroke="#333" stroke-width="1.2"/>
+    <text x="100" y="226" font-size="14" font-weight="bold" text-anchor="middle">ネットワーク</text>
+    <text x="100" y="250" font-family="monospace" font-size="13" text-anchor="middle">model</text>
+    <text x="100" y="278" font-family="monospace" font-size="12" text-anchor="middle">（nn.Module）</text>
+    <text x="100" y="304" font-size="12" text-anchor="middle" fill="#444">例: <tspan font-family="monospace">nn.Linear</tspan></text>
+
+    <!-- loss_fn（右） -->
+    <rect x="825" y="95" width="150" height="95" rx="6" fill="#fff8e1" stroke="#333" stroke-width="1.2"/>
+    <text x="900" y="120" font-size="14" font-weight="bold" text-anchor="middle">損失の関数</text>
+    <text x="900" y="144" font-family="monospace" font-size="13" text-anchor="middle">loss_fn</text>
+    <text x="900" y="172" font-size="12" text-anchor="middle" fill="#444">例: <tspan font-family="monospace">nn.MSELoss()</tspan></text>
+
+    <!-- optimizer（下） -->
+    <rect x="360" y="490" width="280" height="62" rx="6" fill="#fff8e1" stroke="#333" stroke-width="1.2"/>
+    <text x="500" y="514" font-size="14" font-weight="bold" text-anchor="middle">最適化 <tspan font-family="monospace" font-weight="normal" font-size="13">optimizer</tspan></text>
+    <text x="500" y="538" font-size="12" text-anchor="middle" fill="#444">例: <tspan font-family="monospace">torch.optim.Adam</tspan></text>
+  </g>
+
+  <!-- ===== 注記 ===== -->
+  <text x="500" y="598" font-family="sans-serif" font-size="13.5" text-anchor="middle" fill="#444">強化学習では、② の『目標 y』の作り方が手法ごとに違う（DQN・方策勾配法などで扱う予定）</text>
+</svg>
