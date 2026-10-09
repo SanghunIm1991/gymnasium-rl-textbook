@@ -17,8 +17,9 @@ GitHub をブラウザで開けば、実行した結果を含めてそのまま�
 | | ・[Gymnasium](overview/gymnasium.md) | 環境の一覧と章の対応、基本の操作、ベクトル化環境 | |
 | | ・[Stable-Baselines3](overview/sb3.md) | アルゴリズムと扱える行動の種類、学習・保存・評価の操作 | |
 | | ・[PyTorch](overview/pytorch.md) | テンソル、自動微分、学習の基本の流れ（第7章から使う予定） | |
+| 6 | [第3章 FrozenLake](chapters/ch03_frozenlake/ch03_frozenlake.ipynb) | 滑る氷の湖を、Q学習のサンプルで試行錯誤して渡り、湖の仕組みから計算で解く価値反復・方策反復と比べる（[GIF はこちら](chapters/ch03_frozenlake/README.md)） | 第2章・概要資料（強化学習） |
 
-第3章（FrozenLake）以降は準備中です。
+第4章（CliffWalking）以降は準備中です。
 
 ## ライセンス
 
