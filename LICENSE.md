@@ -41,11 +41,11 @@ SOFTWARE.
 
 | ソフトウェア | ライセンス | この教科書との関わり |
 |---|---|---|
-| Gymnasium（Farama Foundation） | MIT License | 環境。`figures/` の環境の絵（GIF 等）は、Gymnasium の描画処理が出力したもの |
+| Gymnasium（Farama Foundation） | MIT License | 環境。第0・1章の `figures/` の環境の絵（GIF 等）は、Gymnasium の描画処理が出力したもの（第3章の地図・GIF は、Gymnasium の描画を使わず matplotlib で描いたもの） |
 | Stable-Baselines3 | MIT License | 学習アルゴリズム |
 | PyTorch | BSD-3-Clause ほか（複数のライセンスの組み合わせ） | ニューラルネットワークの計算 |
 | NumPy | BSD-3-Clause ほか（複数のライセンスの組み合わせ） | 数値計算 |
-| matplotlib | Python Software Foundation License に基づく matplotlib のライセンス | グラフの作成 |
+| matplotlib | Python Software Foundation License に基づく matplotlib のライセンス | グラフと図の作成 |
 | imageio | BSD-2-Clause | GIF の作成 |
 | Pillow | MIT-CMU License | 絵への線と文字の書き込み。文字は Pillow に同梱の既定のフォント Aileron Regular（dotcolon.net、「No Rights Reserved」＝ CC0 相当）で描いている |
 | TensorBoard | Apache License 2.0 | 学習の記録の書き出しと、グラフでの表示 |
