@@ -72,7 +72,7 @@
 
 ### 3-3. 方策オンと方策オフ
 
-- **方策オン**: 今の方策で集めた経験で、その方策自身を改めます。SARSA・PPO・A2C などです
+- **方策オン**: 今の方策で集めた経験で、その方策自身を改めます。SARSA・PPO・A2C や、[第6章](../chapters/ch06_blackjack/ch06_blackjack.ipynb)の ε-greedy のモンテカルロ制御などです
 - **方策オフ**: 経験を集める方策と、改めたい方策が別でもかまいません。過去の経験を貯めておいて使い回せます。Q学習・DQN・SAC などです
 
 違いが目に見えるのが、崖のそばを歩く CliffWalking です。[第4章](../chapters/ch04_cliffwalking/ch04_cliffwalking.ipynb)で、SARSA は崖から離れた遠回りの道を、Q学習は崖のふちを進む最短の道を学ぶことを確かめます。Stable-Baselines3 のアルゴリズムも、この2つの系統に分かれています（[Stable-Baselines3 の概要資料](sb3.md)の1節）。

@@ -21,10 +21,8 @@
     <rect x="214" y="69" width="64" height="20" rx="10" fill="#2b6cb0"/>
     <text x="246" y="83" font-size="12" fill="#fff" text-anchor="middle">方策オフ</text>
     <text x="288" y="83" fill="#555">（箱の枠の色も同じ）</text>
-    <rect x="440" y="70" width="30" height="18" rx="4" fill="#fff" stroke="#888888" stroke-width="2"/>
-    <text x="478" y="83">灰: 区分なし（章で扱う）</text>
-    <rect x="654" y="70" width="30" height="18" rx="4" fill="#fff" stroke="#c8661a" stroke-width="4"/>
-    <text x="692" y="83">太枠: 第1章で済み</text>
+    <rect x="440" y="70" width="30" height="18" rx="4" fill="#fff" stroke="#c8661a" stroke-width="4"/>
+    <text x="478" y="83">太枠: 第1章で済み</text>
   </g>
 
   <!-- 段階の領域 -->
@@ -76,10 +74,12 @@
     <text x="279" y="499" font-size="12" fill="#fff" text-anchor="middle">方策オン</text>
   </g>
   <g>
-    <rect x="35" y="562" width="290" height="84" rx="8" fill="#fff" stroke="#888888" stroke-width="2"/>
+    <rect x="35" y="562" width="290" height="84" rx="8" fill="#fff" stroke="#c8661a" stroke-width="2"/>
     <text x="49" y="588" font-size="15" font-weight="bold" fill="#222">モンテカルロ法</text>
     <text x="49" y="612" font-size="13" fill="#333">環境: Blackjack</text>
     <text x="49" y="634" font-size="13" fill="#333">章: 第6章</text>
+    <rect x="247" y="619" width="64" height="20" rx="10" fill="#c8661a"/>
+    <text x="279" y="633" font-size="12" fill="#fff" text-anchor="middle">方策オン</text>
   </g>
 
   <!-- 段階2の箱（左の列: 方策オフ、右の列: 方策オン） -->
