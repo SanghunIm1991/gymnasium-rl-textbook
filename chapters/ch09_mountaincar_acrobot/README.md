@@ -14,4 +14,4 @@
 
 ![学習後のエージェントが、2本の棒の振り子の揺れを少しずつ大きくし、先端を上の線より高く振り上げる](figures/ch09_acrobot.gif)
 
-絵は、Gymnasium（MIT License）の MountainCar と Acrobot の描画処理が出力したものです。仕様と出典は、[第9章の Notebook](ch09_mountaincar_acrobot.ipynb) の末尾の「出典」の節にあります。ライセンスは、リポジトリの [LICENSE.md](../../LICENSE.md) を見てください。
+絵は、Gymnasium（MIT License）の MountainCar と Acrobot の描画処理が出力したものです。ただし、Acrobot の環境のファイル（`gymnasium/envs/classic_control/acrobot.py`）には、RLPy（2013 年）のコードがもとであることと、ライセンスが BSD 3-Clause であることが記載されています。仕様と出典は、[第9章の Notebook](ch09_mountaincar_acrobot.ipynb) の末尾の「出典」の節にあります。ライセンスは、リポジトリの [LICENSE.md](../../LICENSE.md) を見てください。
