@@ -41,7 +41,7 @@ SOFTWARE.
 
 | ソフトウェア | ライセンス | この教科書との関わり |
 |---|---|---|
-| Gymnasium（Farama Foundation） | MIT License | 環境。第0・1・7〜9章の `figures/` の環境の絵（GIF 等）は、Gymnasium の描画処理が出力したもの（第3〜6章の図・GIF は、Gymnasium の描画を使わず matplotlib で描いたもの）。第9章の Acrobot の環境のファイル（`gymnasium/envs/classic_control/acrobot.py`）には、RLPy（2013 年）のコードがもとで、ライセンスが BSD 3-Clause であることが記載されている |
+| Gymnasium（Farama Foundation） | MIT License | 環境。第0・1・7〜10章の `figures/` の環境の絵（GIF 等）は、Gymnasium の描画処理が出力したもの（第3〜6章の図・GIF は、Gymnasium の描画を使わず matplotlib で描いたもの）。第9章の Acrobot の環境のファイル（`gymnasium/envs/classic_control/acrobot.py`）には、RLPy（2013 年）のコードがもとで、ライセンスが BSD 3-Clause であることが記載されている |
 | Stable-Baselines3 | MIT License | 学習アルゴリズム |
 | PyTorch | BSD-3-Clause ほか（複数のライセンスの組み合わせ） | ニューラルネットワークの計算 |
 | NumPy | BSD-3-Clause ほか（複数のライセンスの組み合わせ） | 数値計算 |

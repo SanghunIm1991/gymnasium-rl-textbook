@@ -40,11 +40,11 @@ SB3 2.9.0 の本体に入っているアルゴリズムは、次の6つです（
 | PPO | 方策オン | `Box`・`Discrete`・`MultiDiscrete`・`MultiBinary` | 第1章（済み）、第11章 LunarLander（予定） |
 | A2C | 方策オン | `Box`・`Discrete`・`MultiDiscrete`・`MultiBinary` | 第8章 CartPole（済み。自作の REINFORCE のサンプルと比べる） |
 | DQN | 方策オフ | `Discrete` だけ | 第7章 CartPole（済み。自作の解説用サンプルと比べる）・第9章 MountainCar・Acrobot（済み） |
-| SAC | 方策オフ | `Box` だけ | 第10章 Pendulum（予定） |
-| TD3 | 方策オフ | `Box` だけ | 第10章 Pendulum（予定） |
-| DDPG | 方策オフ（TD3 を受け継ぐ） | `Box` だけ | 第10章 Pendulum（予定） |
+| SAC | 方策オフ | `Box` だけ | 第10章 Pendulum（済み） |
+| TD3 | 方策オフ | `Box` だけ | 第10章 Pendulum（済み。seed を変えて測った値を SAC と比べる） |
+| DDPG | 方策オフ（TD3 を受け継ぐ） | `Box` だけ | 第10章 Pendulum（済み。自作の解説用サンプルと比べる） |
 
-DQN は行動が連続の値の環境（Pendulum など）では使えず、SAC・TD3・DDPG は行動が「左か右か」のような環境（CartPole など）では使えません。環境の行動の空間を見れば、使えるアルゴリズムが絞れます。
+DQN は行動が連続の値の環境（Pendulum など）では使えず、SAC・TD3・DDPG は行動が「左か右か」のような環境（CartPole など）では使えません。環境の行動の空間を見れば、使えるアルゴリズムが絞れます。ただし、行動を区切るラッパーをかぶせれば、行動が連続の値の環境でも DQN を使えます（[第10章](../chapters/ch10_pendulum/ch10_pendulum.ipynb)の4節）。
 
 SB3 には、表形式の手法（価値反復・Q学習など）や、もっとも基本的な方策勾配法の REINFORCE は入っていません。そのため、この教科書では、第3〜6章（表形式）は NumPy の解説用のサンプルを用意して扱いました。第8章（REINFORCE）は、PyTorch の解説用のサンプルを用意して扱いました。
 
