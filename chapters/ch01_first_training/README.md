@@ -1,6 +1,6 @@
 # 第1章 動かして楽しむ：学習の前と後の CartPole
 
-[第1章の Notebook](ch01_first_training.ipynb) の5節で作った GIF です。GitHub では Notebook の中の GIF の動きが見られないため（著者が、private だった 2026-10-01 と、public にした後の 2026-10-10 に確かめました）、このページで見られるようにしています。
+[第1章の Notebook](ch01_first_training.ipynb) の5節で作った GIF です。GitHub では Notebook の中の GIF の動きが見られないため（著者が、private だった 2026-10-01 に第0章で、public にした後の 2026-10-10 に第3〜5章で確かめました）、このページで見られるようにしています。
 
 ## 学習前
 

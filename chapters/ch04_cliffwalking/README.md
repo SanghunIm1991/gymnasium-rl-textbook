@@ -1,6 +1,6 @@
 # 第4章 CliffWalking：SARSA と Q学習が学んだ道を歩く様子
 
-[第4章の Notebook](ch04_cliffwalking.ipynb) の4-3節で作った GIF です。GitHub では Notebook の中の GIF の動きが見られないため（著者が、private だった 2026-10-01 と、public にした後の 2026-10-10 に確かめました）、このページで見られるようにしています。
+[第4章の Notebook](ch04_cliffwalking.ipynb) の4-3節で作った GIF です。GitHub では Notebook の中の GIF の動きが見られないため（著者が、private だった 2026-10-01 に第0章で、public にした後の 2026-10-10 に第3〜5章で確かめました）、このページで見られるようにしています。
 
 ## 学習後（それぞれエピソードを 500 回経験した後）
 
