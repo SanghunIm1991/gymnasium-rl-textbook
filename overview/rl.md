@@ -29,8 +29,8 @@
 | 表で覚える | Q学習・SARSA | FrozenLake・CliffWalking・Taxi | 第3章（済み。Q学習）・第4章（済み。SARSA と Q学習）・第5章（済み。Q学習） |
 | 表で覚える | モンテカルロ法 | Blackjack | 第6章（済み） |
 | ネットワークで近似する | DQN | CartPole | 第7章（済み） |
-| ネットワークで近似する | 方策勾配法（REINFORCE） | CartPole | 第8章（予定） |
-| ネットワークで近似する | A2C（方策オンの Actor-Critic） | 未定 | 未定（PPO の前の段階として紹介する予定） |
+| ネットワークで近似する | 方策勾配法（REINFORCE） | CartPole | 第8章（済み） |
+| ネットワークで近似する | A2C（方策オンの Actor-Critic） | CartPole | 第8章（済み。SB3 で動かし、REINFORCE と比べる） |
 | ネットワークで近似する | PPO（方策オンの Actor-Critic） | CartPole・LunarLander | 第1章（済み）・第11章（予定） |
 | ネットワークで近似する | DDPG・SAC（方策オフの Actor-Critic） | Pendulum | 第10章（予定） |
 
