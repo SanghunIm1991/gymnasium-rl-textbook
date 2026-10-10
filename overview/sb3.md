@@ -42,7 +42,7 @@ SB3 2.9.0 の本体に入っているアルゴリズムは、次の6つです（
 | DQN | 方策オフ | `Discrete` だけ | 第7章 CartPole（済み。自作の解説用サンプルと比べる）・第9章 MountainCar・Acrobot（済み） |
 | SAC | 方策オフ | `Box` だけ | 第10章 Pendulum（済み） |
 | TD3 | 方策オフ | `Box` だけ | 第10章 Pendulum（済み。seed を変えて測った値を SAC と比べる） |
-| DDPG | 方策オフ（TD3 を受け継ぐ） | `Box` だけ | 第10章 Pendulum（済み。自作の解説用サンプルと比べる） |
+| DDPG | 方策オフ（TD3 を受け継ぐ） | `Box` だけ | 第10章 Pendulum（済み。seed を変えて測った値を、自作の解説用サンプルと比べる） |
 
 DQN は行動が連続の値の環境（Pendulum など）では使えず、SAC・TD3・DDPG は行動が「左か右か」のような環境（CartPole など）では使えません。環境の行動の空間を見れば、使えるアルゴリズムが絞れます。ただし、行動を区切るラッパーをかぶせれば、行動が連続の値の環境でも DQN を使えます（[第10章](../chapters/ch10_pendulum/ch10_pendulum.ipynb)の4節）。
 
