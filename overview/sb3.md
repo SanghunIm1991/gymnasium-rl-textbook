@@ -39,7 +39,7 @@ SB3 2.9.0 の本体に入っているアルゴリズムは、次の6つです（
 |---|---|---|---|
 | PPO | 方策オン | `Box`・`Discrete`・`MultiDiscrete`・`MultiBinary` | 第1章（済み）、第11章 LunarLander（予定） |
 | A2C | 方策オン | `Box`・`Discrete`・`MultiDiscrete`・`MultiBinary` | 未定 |
-| DQN | 方策オフ | `Discrete` だけ | 第7章 CartPole（予定。自作の解説用サンプルと比べる） |
+| DQN | 方策オフ | `Discrete` だけ | 第7章 CartPole（済み。自作の解説用サンプルと比べる） |
 | SAC | 方策オフ | `Box` だけ | 第10章 Pendulum（予定） |
 | TD3 | 方策オフ | `Box` だけ | 第10章 Pendulum（予定） |
 | DDPG | 方策オフ（TD3 を受け継ぐ） | `Box` だけ | 第10章 Pendulum（予定） |

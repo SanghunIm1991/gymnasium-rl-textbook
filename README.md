@@ -16,13 +16,14 @@ GitHub をブラウザで開けば、実行した結果を含めてそのまま�
 | | ・[強化学習](overview/rl.md) | 基本の言葉、考え方を分ける3つの軸、手法の地図と章の対応 | |
 | | ・[Gymnasium](overview/gymnasium.md) | 環境の一覧と章の対応、基本の操作、ベクトル化環境 | |
 | | ・[Stable-Baselines3](overview/sb3.md) | アルゴリズムと扱える行動の種類、学習・保存・評価の操作 | |
-| | ・[PyTorch](overview/pytorch.md) | テンソル、自動微分、学習の基本の流れ（第7章から使う予定） | |
+| | ・[PyTorch](overview/pytorch.md) | テンソル、自動微分、学習の基本の流れ（第7章から使う） | |
 | 6 | [第3章 FrozenLake](chapters/ch03_frozenlake/ch03_frozenlake.ipynb) | 滑る氷の湖を、Q学習のサンプルで試行錯誤して渡り、湖の仕組みから計算で解く価値反復・方策反復と比べる（[GIF はこちら](chapters/ch03_frozenlake/README.md)） | 第2章・概要資料（強化学習） |
 | 7 | [第4章 CliffWalking](chapters/ch04_cliffwalking/ch04_cliffwalking.ipynb) | 崖のそばのマス目を、SARSA と Q学習のサンプルで渡り、2つの手法が学ぶ道の違いから、方策オンと方策オフの違いを確かめる（[GIF はこちら](chapters/ch04_cliffwalking/README.md)） | 第3章 |
 | 8 | [第5章 Taxi](chapters/ch05_taxi/ch05_taxi.ipynb) | 状態が 500 個ある町でタクシーに客を運ばせ、ε の減衰と行動マスクという探索の工夫を、外したときと比べて確かめる（[GIF はこちら](chapters/ch05_taxi/README.md)） | 第4章 |
 | 9 | [第6章 Blackjack](chapters/ch06_blackjack/ch06_blackjack.ipynb) | ブラックジャックを、勝負を最後まで遊んでから報酬の平均で覚えるモンテカルロ法のサンプルで学ばせ、ルールから計算した最適な方策と比べる（[GIF はこちら](chapters/ch06_blackjack/README.md)） | 第5章 |
+| 10 | [第7章 CartPole（DQN）](chapters/ch07_cartpole_dqn/ch07_cartpole_dqn.ipynb) | 連続した観測を区切った表の Q学習と、表をニューラルネットワークに置き換えた DQN（Stable-Baselines3 と、PyTorch の短いサンプル）で棒を立て、経験再生とターゲットネットワークを外して比べる（[GIF はこちら](chapters/ch07_cartpole_dqn/README.md)） | 第6章・概要資料（PyTorch） |
 
-第7章（CartPole）以降は準備中です。
+第8章（CartPole の続き）以降は準備中です。
 
 ## ライセンス
 
