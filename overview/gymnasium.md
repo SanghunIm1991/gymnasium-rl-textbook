@@ -37,7 +37,7 @@ Gymnasium の環境は、性質ごとにいくつかの分類にまとめられ�
 | Classic Control | `CartPole-v1` | 台車の上の棒を立てる。行動は2つ | 第0〜2章（済み）、第7〜8章（予定） |
 | Toy Text | `FrozenLake-v1` | 凍った湖のマス目を渡る。状態も行動も少ない | 第3章（済み） |
 | Toy Text | `CliffWalking-v1` | 崖のそばのマス目を歩く | 第4章（済み） |
-| Toy Text | `Taxi-v4` | タクシーで客を運ぶ。状態の数が多い | 第5章（予定） |
+| Toy Text | `Taxi-v4` | タクシーで客を運ぶ。状態の数が多い | 第5章（済み） |
 | Toy Text | `Blackjack-v1` | トランプのブラックジャック。結果に偶然が入る | 第6章（予定） |
 | Classic Control | `MountainCar-v0`・`Acrobot-v1` | 報酬がめったに得られない | 第9章（予定） |
 | Classic Control | `Pendulum-v1` | 振り子を立てる。行動が連続の値 | 第10章（予定） |
