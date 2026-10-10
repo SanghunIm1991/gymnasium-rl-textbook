@@ -23,8 +23,9 @@ GitHub をブラウザで開けば、実行した結果を含めてそのまま�
 | 9 | [第6章 Blackjack](chapters/ch06_blackjack/ch06_blackjack.ipynb) | ブラックジャックを、勝負を最後まで遊んでから報酬の平均で覚えるモンテカルロ法のサンプルで学ばせ、ルールから計算した最適な方策と比べる（[GIF はこちら](chapters/ch06_blackjack/README.md)） | 第5章 |
 | 10 | [第7章 CartPole（DQN）](chapters/ch07_cartpole_dqn/ch07_cartpole_dqn.ipynb) | 連続した観測を区切った表の Q学習と、表をニューラルネットワークに置き換えた DQN（Stable-Baselines3 と、PyTorch の短いサンプル）で棒を立て、経験再生とターゲットネットワークを外して比べる（[GIF はこちら](chapters/ch07_cartpole_dqn/README.md)） | 第6章・概要資料（PyTorch） |
 | 11 | [第8章 CartPole の続き（方策勾配法）](chapters/ch08_cartpole_reinforce/ch08_cartpole_reinforce.ipynb) | 行動を選ぶ確率を直接学ぶ方策勾配法で棒を立てる。Stable-Baselines3 の A2C で動かし、PyTorch の短い REINFORCE のサンプルを読んで、収益の標準化を外して比べ、第7章の DQN と結果を並べる（[GIF はこちら](chapters/ch08_cartpole_reinforce/README.md)） | 第7章 |
+| 12 | [第9章 MountainCar／Acrobot](chapters/ch09_mountaincar_acrobot/ch09_mountaincar_acrobot.ipynb) | ゴールに着くまで報酬が変わらない環境で、でたらめな探索の難しさを測り、Stable-Baselines3 の DQN（RL Zoo の値）で山を登る台車と振り上げる振り子を学習させ、表形式の Q学習のサンプルで報酬設計（ポテンシャルに基づく形）を加えて比べる（[GIF はこちら](chapters/ch09_mountaincar_acrobot/README.md)） | 第8章 |
 
-第9章（MountainCar／Acrobot）以降は準備中です。
+第10章（Pendulum）以降は準備中です。
 
 ## ライセンス
 
