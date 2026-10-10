@@ -1,6 +1,6 @@
 # 第3章 FrozenLake：学習後のエージェントが湖を渡る様子
 
-[第3章の Notebook](ch03_frozenlake.ipynb) の4-3節で作った GIF です。著者が第0章で確かめたところ、GitHub の private リポジトリでは Notebook の中の GIF が表示されなかったため（2026-10-01）、このページで見られるようにしています。
+[第3章の Notebook](ch03_frozenlake.ipynb) の4-3節で作った GIF です。GitHub では Notebook の中の GIF の動きが見られないため（著者が、private だった 2026-10-01 と、public にした後の 2026-10-10 に確かめました）、このページで見られるようにしています。
 
 ## 学習後（Q学習で 5,000 回のエピソードを経験した後）
 
