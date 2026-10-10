@@ -27,7 +27,7 @@
 |---|---|---|---|
 | 表で覚える | 価値反復・方策反復（動的計画法） | FrozenLake | 第3章（済み） |
 | 表で覚える | Q学習・SARSA | FrozenLake・CliffWalking・Taxi | 第3章（済み。Q学習）・第4章（済み。SARSA と Q学習）・第5章（済み。Q学習） |
-| 表で覚える | モンテカルロ法 | Blackjack | 第6章（予定） |
+| 表で覚える | モンテカルロ法 | Blackjack | 第6章（済み） |
 | ネットワークで近似する | DQN | CartPole | 第7章（予定） |
 | ネットワークで近似する | 方策勾配法（REINFORCE） | CartPole | 第8章（予定） |
 | ネットワークで近似する | A2C（方策オンの Actor-Critic） | 未定 | 未定（PPO の前の段階として紹介する予定） |

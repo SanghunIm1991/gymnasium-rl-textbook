@@ -20,8 +20,9 @@ GitHub をブラウザで開けば、実行した結果を含めてそのまま�
 | 6 | [第3章 FrozenLake](chapters/ch03_frozenlake/ch03_frozenlake.ipynb) | 滑る氷の湖を、Q学習のサンプルで試行錯誤して渡り、湖の仕組みから計算で解く価値反復・方策反復と比べる（[GIF はこちら](chapters/ch03_frozenlake/README.md)） | 第2章・概要資料（強化学習） |
 | 7 | [第4章 CliffWalking](chapters/ch04_cliffwalking/ch04_cliffwalking.ipynb) | 崖のそばのマス目を、SARSA と Q学習のサンプルで渡り、2つの手法が学ぶ道の違いから、方策オンと方策オフの違いを確かめる（[GIF はこちら](chapters/ch04_cliffwalking/README.md)） | 第3章 |
 | 8 | [第5章 Taxi](chapters/ch05_taxi/ch05_taxi.ipynb) | 状態が 500 個ある町でタクシーに客を運ばせ、ε の減衰と行動マスクという探索の工夫を、外したときと比べて確かめる（[GIF はこちら](chapters/ch05_taxi/README.md)） | 第4章 |
+| 9 | [第6章 Blackjack](chapters/ch06_blackjack/ch06_blackjack.ipynb) | ブラックジャックを、勝負を最後まで遊んでから報酬の平均で覚えるモンテカルロ法のサンプルで学ばせ、ルールから計算した最適な方策と比べる（[GIF はこちら](chapters/ch06_blackjack/README.md)） | 第5章 |
 
-第6章（Blackjack）以降は準備中です。
+第7章（CartPole）以降は準備中です。
 
 ## ライセンス
 

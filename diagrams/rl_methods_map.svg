@@ -79,7 +79,7 @@
     <rect x="35" y="562" width="290" height="84" rx="8" fill="#fff" stroke="#888888" stroke-width="2"/>
     <text x="49" y="588" font-size="15" font-weight="bold" fill="#222">モンテカルロ法</text>
     <text x="49" y="612" font-size="13" fill="#333">環境: Blackjack</text>
-    <text x="49" y="634" font-size="13" fill="#333">章: 第6章（予定）</text>
+    <text x="49" y="634" font-size="13" fill="#333">章: 第6章</text>
   </g>
 
   <!-- 段階2の箱（左の列: 方策オフ、右の列: 方策オン） -->
