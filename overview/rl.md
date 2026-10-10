@@ -26,7 +26,7 @@
 | 段階 | 手法 | 環境の例 | 章 |
 |---|---|---|---|
 | 表で覚える | 価値反復・方策反復（動的計画法） | FrozenLake | 第3章（済み） |
-| 表で覚える | Q学習・SARSA | FrozenLake・CliffWalking・Taxi | 第3章（済み。Q学習）・第4章（済み。SARSA と Q学習）・第5章（済み。Q学習） |
+| 表で覚える | Q学習・SARSA | FrozenLake・CliffWalking・Taxi・CartPole・MountainCar | 第3章（済み。Q学習）・第4章（済み。SARSA と Q学習）・第5章（済み。Q学習）・第7章（済み。観測を区切った表の Q学習）・第9章（済み。観測を区切った表の Q学習に報酬設計を加える） |
 | 表で覚える | モンテカルロ法 | Blackjack | 第6章（済み） |
 | ネットワークで近似する | DQN | CartPole・MountainCar・Acrobot | 第7章（済み）・第9章（済み。報酬がまれにしか得られない環境） |
 | ネットワークで近似する | 方策勾配法（REINFORCE） | CartPole | 第8章（済み） |
