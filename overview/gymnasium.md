@@ -42,7 +42,7 @@ Gymnasium の環境は、性質ごとにいくつかの分類にまとめられ�
 | Classic Control | `MountainCar-v0`・`Acrobot-v1` | 報酬がめったに得られない | 第9章（済み） |
 | Classic Control | `Pendulum-v1` | 振り子を立てる。行動が連続の値 | 第10章（済み） |
 | Box2D | `LunarLander-v3` | 月面に着陸する | 第11章（済み） |
-| Box2D | `BipedalWalker-v3` | 二本足で歩く | 第12章（予定） |
+| Box2D | `BipedalWalker-v3` | 二本足で歩く | 第12章（済み） |
 | MuJoCo | `InvertedPendulum-v5`・`Hopper-v5` など | 本格的な物理シミュレーション | 第13章（任意・予定） |
 
 Classic Control と Toy Text は Gymnasium だけで動き、Box2D は環境構築マニュアルで入れた `box2d` を使います。MuJoCo の環境は、ID は登録されていますが、動かすには別のパッケージ（`mujoco`）が要ります（環境構築マニュアルでは入れていません）。公式の文書には、ほかに Atari（ゲーム機のゲーム）や、外部の団体が作った環境の分類もあります。

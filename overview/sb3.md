@@ -37,7 +37,7 @@ SB3 2.9.0 の本体に入っているアルゴリズムは、次の6つです（
 
 | アルゴリズム | 系統 | 扱える行動の種類 | この教科書で使う章 |
 |---|---|---|---|
-| PPO | 方策オン | `Box`・`Discrete`・`MultiDiscrete`・`MultiBinary` | 第1章（済み）、第11章 LunarLander（済み。同じ設定で `Discrete` の版と `Box` の版を比べる） |
+| PPO | 方策オン | `Box`・`Discrete`・`MultiDiscrete`・`MultiBinary` | 第1章（済み）、第11章 LunarLander（済み。同じ設定で `Discrete` の版と `Box` の版を比べる）、第12章 BipedalWalker（済み。`VecNormalize` で観測と報酬を正規化する） |
 | A2C | 方策オン | `Box`・`Discrete`・`MultiDiscrete`・`MultiBinary` | 第8章 CartPole（済み。自作の REINFORCE のサンプルと比べる） |
 | DQN | 方策オフ | `Discrete` だけ | 第7章 CartPole（済み。自作の解説用サンプルと比べる）・第9章 MountainCar・Acrobot（済み） |
 | SAC | 方策オフ | `Box` だけ | 第10章 Pendulum（済み） |
