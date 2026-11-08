@@ -94,8 +94,8 @@
   <g>
     <rect x="435" y="428" width="300" height="84" rx="8" fill="#fff" stroke="#2b6cb0" stroke-width="2"/>
     <text x="449" y="454" font-size="15" font-weight="bold" fill="#222">DDPG・SAC（方策オフの Actor-Critic）</text>
-    <text x="449" y="478" font-size="13" fill="#333">環境: Pendulum</text>
-    <text x="449" y="500" font-size="13" fill="#333">章: 第10章</text>
+    <text x="449" y="478" font-size="13" fill="#333">環境: Pendulum・Hopper・Walker2d</text>
+    <text x="449" y="500" font-size="13" fill="#333">章: 第10章・第13章</text>
     <rect x="657" y="485" width="64" height="20" rx="10" fill="#2b6cb0"/>
     <text x="689" y="499" font-size="12" fill="#fff" text-anchor="middle">方策オフ</text>
   </g>
@@ -124,6 +124,4 @@
     <text x="1009" y="454" font-size="12" fill="#fff" text-anchor="middle">方策オン</text>
   </g>
 
-  <!-- 注記 -->
-  <text x="1070" y="700" font-size="12" text-anchor="end" fill="#666">（予定）はまだ書いていない章。章を書くときに見直すことがあります</text>
 </svg>

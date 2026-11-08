@@ -37,11 +37,11 @@ SOFTWARE.
 
 ## 第三者のソフトウェア
 
-この教科書は、次のソフトウェアを使っています。リポジトリには含めておらず、読者が環境構築マニュアルに従って PyPI 等から導入します。ライセンスは、各パッケージに登録された情報（2026-10-01 確認）によります。
+この教科書は、次のソフトウェアを使っています。リポジトリには含めておらず、読者が環境構築マニュアルに従って PyPI 等から導入します。ライセンスは、各パッケージに登録された情報（2026-10-01 確認。あとから足した Optuna は 2026-10-24、MuJoCo は 2026-10-25 に確認）によります。
 
 | ソフトウェア | ライセンス | この教科書との関わり |
 |---|---|---|
-| Gymnasium（Farama Foundation） | MIT License | 環境。第0・1・7〜12章の `figures/` の環境の絵（GIF 等）は、Gymnasium の描画処理が出力したもの（第3〜6章の図・GIF は、Gymnasium の描画を使わず matplotlib で描いたもの）。第9章の Acrobot の環境のファイル（`gymnasium/envs/classic_control/acrobot.py`）には、RLPy（2013 年）のコードがもとで、ライセンスが BSD 3-Clause であることが記載されている |
+| Gymnasium（Farama Foundation） | MIT License | 環境。第0・1・7〜13章の `figures/` の環境の絵（GIF 等）は、Gymnasium の描画処理が出力したもの（第13章は、Gymnasium の MuJoCo の環境を MuJoCo の描画処理で描いたもの。第3〜6章の図・GIF は、Gymnasium の描画を使わず matplotlib で描いたもの）。第9章の Acrobot の環境のファイル（`gymnasium/envs/classic_control/acrobot.py`）には、RLPy（2013 年）のコードがもとで、ライセンスが BSD 3-Clause であることが記載されている |
 | Stable-Baselines3 | MIT License | 学習アルゴリズム |
 | PyTorch | BSD-3-Clause ほか（複数のライセンスの組み合わせ） | ニューラルネットワークの計算 |
 | NumPy | BSD-3-Clause ほか（複数のライセンスの組み合わせ） | 数値計算 |
@@ -53,5 +53,6 @@ SOFTWARE.
 | pygame-ce | LGPL v2.1 | Gymnasium の環境の描画 |
 | Box2D（`box2d`） | zlib License | 物理シミュレーションの環境 |
 | Optuna（Preferred Networks） | MIT License（同梱の `LICENSE_THIRD_PARTY` に、SciPy のコードを含むことが記載されている） | ハイパーパラメータの探索（第12章） |
+| MuJoCo（Google DeepMind） | Apache License 2.0（同梱の `LICENSES_THIRD_PARTY.md` に、MuJoCo が使っている第三者の部品のライセンスの一覧がある） | 物理シミュレーションと環境の描画（任意の第13章） |
 
 参照した公式の文書は、各冊の末尾の「出典」に書いています。文章は著者の言葉でまとめたもので、逐語の転載はしていません。

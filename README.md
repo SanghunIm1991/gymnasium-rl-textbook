@@ -27,8 +27,7 @@ GitHub をブラウザで開けば、実行した結果を含めてそのまま�
 | 13 | [第10章 Pendulum](chapters/ch10_pendulum/ch10_pendulum.ipynb) | 行動が連続の値（トルク）の振り子を、トルクを区切った DQN と、Stable-Baselines3 の SAC（RL Zoo の値）で振り上げ、PyTorch の短い DDPG のサンプルで Actor と Critic の学び方を読み、SAC・TD3・DDPG の結果を並べる（[GIF はこちら](chapters/ch10_pendulum/README.md)） | 第9章 |
 | 14 | [第11章 LunarLander](chapters/ch11_lunarlander/ch11_lunarlander.ipynb) | 月面に着陸する宇宙船を、Stable-Baselines3 の PPO（RL Zoo の値）で学習させ、集めた経験の使い方・GAE・クリップを小さな NumPy のサンプルとソースで読み、行動が離散の版と連続の値の版を同じ設定で比べる（[GIF はこちら](chapters/ch11_lunarlander/README.md)） | 第10章 |
 | 15 | [第12章 BipedalWalker](chapters/ch12_bipedalwalker/ch12_bipedalwalker.ipynb) | 二本足のロボットを、Stable-Baselines3 の PPO（RL Zoo の値、観測と報酬の正規化 `VecNormalize`）で歩かせ、正規化の仕組みを小さな NumPy のサンプルとソースで読み、ハードコア版で試し、Optuna でハイパーパラメータを探して別の seed で確かめる（[GIF はこちら](chapters/ch12_bipedalwalker/README.md)） | 第11章 |
-
-第13章（MuJoCo、任意）は準備中です。
+| 16 | 第13章 MuJoCo（任意）: [（1）InvertedPendulum・Hopper](chapters/ch13_mujoco/ch13_1_hopper.ipynb)・[（2）Walker2d](chapters/ch13_mujoco/ch13_2_walker2d.ipynb) | 物理シミュレーター MuJoCo の環境で、一本足と二本足のロボットを Stable-Baselines3 の SAC（RL Zoo の値）で前へ進ませ、報酬が「前へ進んだ分」と「倒れずにいた分」の足し算でできていることをソースで読み、PPO で試した結果と比べる。重力や胴体の重さを変えて試し、長い学習のモデルを保存して続きから学習する。MuJoCo は環境構築マニュアルの9節で入れる（[GIF はこちら](chapters/ch13_mujoco/README.md)） | 第10章・第12章 |
 
 ## ライセンス
 

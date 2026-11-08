@@ -14,6 +14,7 @@
 > - **期待する結果の出どころ**: 3-2節の `py -3.13 --version` と `py -0p` の表示と、6-2節の版の確認の表示は、著者の環境で実際に確かめたものです（2026-10-01）。インストーラの画面の説明と、2節・4節〜6-1節・7節の表示は、公式の文書と PyPI に登録された依存関係の情報から想定したものです。ライブラリの版の番号や、一緒に入る依存ライブラリの顔ぶれは、実行した時期によって変わります。
 > - **GPU 版の手順**（5-2節）は、公式の情報をもとに書いたもので、著者の環境では動作を確かめていません。PyTorch の公式サイトの画面の選択肢の名前も確かめていません。
 > - **8節の表**の一部（2行目）は、著者の環境で起きた現象と、そこからの推定にもとづいています。
+> - **9節**（MuJoCo、任意）は、2026-10-25 に足した節です。版の確認の表示は著者の環境で実際に確かめたもので、`pip install` の表示は想定したものです。
 > - **実行環境が無くても読めるように**: 各手順の直後に、成功したときの表示と、その読み方を書いています。
 
 ## 0. 学習目標と完了条件
@@ -38,6 +39,7 @@
 | 4 | PyTorch | ニューラルネットワークの計算を受け持つ | 5節 |
 | 5 | Gymnasium・Stable-Baselines3 ほか | 強化学習の環境と、学習アルゴリズムの実装 | 6節 |
 | 6 | VS Code と拡張機能 | Notebook を開いて実行する | 7節 |
+| （任意） | MuJoCo | 任意の第13章の環境の物理シミュレーター | 9節 |
 
 **仮想環境**とは、プロジェクトごとに分けたライブラリの置き場です。ほかの用途で入れた Python のライブラリと版がぶつからないように、この教科書用のライブラリはすべてここに入れます。
 
@@ -240,6 +242,38 @@ Successfully installed ... box2d-2.3.10 ... gymnasium-1.3.0 ... matplotlib-<…>
 | 6-1節で `box2d` のビルド（`Building wheel for box2d`）が始まり、失敗する | `box2d` は Python 3.10〜3.13 用にビルド済みのファイルが配布されています（2026-10-01 時点）。ビルドが始まるのは、仮想環境の Python がこれ以外の版のときです。6-2節のコマンドで Python の版を確かめ、3.13 で仮想環境を作り直します |
 | VS Code のカーネルの一覧に `.venv` が出ない | 教材のフォルダ（`.venv` があるフォルダ）を開いているかを確かめます。それでも出ない場合は、VS Code を再起動します |
 
+## 9. MuJoCo を入れる（任意）
+
+任意の第13章では、MuJoCo（関節でつながった体の動きを計算する物理シミュレーター）を使う環境（Hopper など）を動かします。第13章を読むときだけ、6節までの準備に加えて、次のコマンドで入れます。第12章までの章では使いません。
+
+```powershell
+.venv\Scripts\python -m pip install "gymnasium[mujoco]"
+```
+
+`gymnasium[mujoco]` の追加分は、`mujoco`・`imageio`・`packaging` です（Gymnasium 1.3.0 のパッケージに登録された依存関係）。`imageio` は6-1節で入れてあるので、新しく入るのは主に `mujoco` と、`mujoco` が使うライブラリ（`glfw`・`pyopengl` など）です。
+
+**期待する結果**（末尾の抜粋。想定した表示です）:
+
+```text
+Collecting mujoco>=2.1.5 (from gymnasium[mujoco])
+...
+Successfully installed ... glfw-<…> ... mujoco-<…> ...
+```
+
+最後の行が `Successfully installed` で始まり、エラー（`ERROR:`）が出ていなければ成功です。版を確かめます。
+
+```powershell
+.venv\Scripts\python -c "import gymnasium, mujoco; print(gymnasium.__version__, mujoco.__version__)"
+```
+
+**期待する結果**:
+
+```text
+1.3.0 3.17.0
+```
+
+左から Gymnasium・MuJoCo の版です。後から入れた場合は、MuJoCo がより新しい版の番号になっていることがあります。
+
 ## 次に読むもの
 
 - [第0章 動作確認](../chapters/ch00_setup_check/ch00_setup_check.ipynb)
@@ -252,6 +286,7 @@ Successfully installed ... box2d-2.3.10 ... gymnasium-1.3.0 ... matplotlib-<…>
 - python.org, "Python Releases for Windows": https://www.python.org/downloads/windows/
 - PyTorch, "Release Compatibility Matrix"（`RELEASE.md`）: https://github.com/pytorch/pytorch/blob/main/RELEASE.md
 - PyPI の各パッケージのページ（gymnasium・stable-baselines3・torch・box2d）
+- 9節: Gymnasium 1.3.0 のパッケージのメタデータ（`gymnasium[mujoco]` の依存関係）と、導入した MuJoCo 3.17.0 の版の表示（2026-10-25 確認）
 
 次のページは、導入の入口として案内しているもので、内容は確かめていません。
 
